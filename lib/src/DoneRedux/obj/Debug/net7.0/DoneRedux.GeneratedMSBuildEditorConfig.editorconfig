@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = DoneRedux
-build_property.ProjectDir = /Users/yangxiaoming/done-redux/lib/src/DoneRedux/
+build_property.ProjectDir = F:\done-redux\lib\src\DoneRedux\

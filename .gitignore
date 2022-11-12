@@ -90,4 +90,5 @@ lint/tmp/
 .vs
 *.user
 bin
-obj
+lib/src/DoneRedux/obj/
+example/obj/
