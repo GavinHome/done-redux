@@ -1,1 +1,0 @@
-F:\done-redux\example\example.csproj;x64
