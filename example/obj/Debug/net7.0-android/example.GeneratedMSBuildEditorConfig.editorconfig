@@ -12,34 +12,34 @@ build_property.EnableSingleFileAnalyzer = true
 build_property.EnableTrimAnalyzer = false
 build_property.IncludeAllContentForSelfExtract = 
 build_property.RootNamespace = example
-build_property.ProjectDir = F:\done-redux\example\
+build_property.ProjectDir = /Users/yangxiaoming/done-redux/example/
 
-[F:/done-redux/example/App.xaml]
+[/Users/yangxiaoming/done-redux/example/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = example.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
 build_metadata.AdditionalFiles.RelativePath = App.xaml
 
-[F:/done-redux/example/AppShell.xaml]
+[/Users/yangxiaoming/done-redux/example/AppShell.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = example.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[F:/done-redux/example/MainPage.xaml]
+[/Users/yangxiaoming/done-redux/example/MainPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = example.MainPage.xaml
 build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
 build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
 
-[F:/done-redux/example/Resources/Styles/Colors.xaml]
+[/Users/yangxiaoming/done-redux/example/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = example.Resources.Styles.Colors.xaml
-build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
-build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Colors.xaml
 
-[F:/done-redux/example/Resources/Styles/Styles.xaml]
+[/Users/yangxiaoming/done-redux/example/Resources/Styles/Styles.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = example.Resources.Styles.Styles.xaml
-build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
-build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Styles.xaml

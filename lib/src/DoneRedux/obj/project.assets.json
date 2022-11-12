@@ -8,40 +8,26 @@
     "net7.0": []
   },
   "packageFolders": {
-    "D:\\Users\\yangxiaomin\\.nuget\\packages": {},
-    "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "/Users/yangxiaoming/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\done-redux\\lib\\src\\DoneRedux\\DoneRedux.csproj",
+      "projectUniqueName": "/Users/yangxiaoming/done-redux/lib/src/DoneRedux/DoneRedux.csproj",
       "projectName": "DoneRedux",
-      "projectPath": "F:\\done-redux\\lib\\src\\DoneRedux\\DoneRedux.csproj",
-      "packagesPath": "D:\\Users\\yangxiaomin\\.nuget\\packages",
-      "outputPath": "F:\\done-redux\\lib\\src\\DoneRedux\\obj\\",
+      "projectPath": "/Users/yangxiaoming/done-redux/lib/src/DoneRedux/DoneRedux.csproj",
+      "packagesPath": "/Users/yangxiaoming/.nuget/packages/",
+      "outputPath": "/Users/yangxiaoming/done-redux/lib/src/DoneRedux/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\yangxiaomin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/yangxiaoming/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
-        "https://aka.ms/maui-preview/index.json": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://nuget.telerik.com/nuget": {},
-        "https://nuget.telerik.com/v3/index.json": {},
-        "https://pkgs.dev.azure.com/azure-public/vside/_packaging/xamarin-impl/nuget/v3/index.json": {},
-        "https://www.myget.org/F/abp-nightly/api/v3/index.json": {}
+        "/usr/local/share/dotnet/library-packs": {},
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
@@ -74,7 +60,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.100/RuntimeIdentifierGraph.json"
       }
     }
   }
