@@ -23,6 +23,12 @@ public static class ObjectCopier
         }
 
         var stream = System.Text.Json.JsonSerializer.Serialize<T>(source);
+
+        if(string.IsNullOrEmpty(stream))
+        {
+            return default;
+        }
+
         return System.Text.Json.JsonSerializer.Deserialize<T>(stream);
     }
 }

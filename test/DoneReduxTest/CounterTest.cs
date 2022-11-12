@@ -15,19 +15,19 @@ namespace DoneReduxTest
         public async Task Test1()
         {
             var state = CounterState.initState();
-            var store = Store<CounterState>.createStore(state);
+            var store = Store<CounterState>.createStore(state, CounterReducer.buildReducer());
 
             await store.subscribe(async () =>
             {
-                CounterState cs = await store.getState();
-                Console.WriteLine($"count:{(cs.Counter)}");
+                CounterState lastState = await store.getState();
+                Console.WriteLine($"count:{(lastState.Counter)}");
             });
 
-            var newState = state.Clone();
-            newState.Counter = 1;
-            await store.changeState(newState);
+            await store.dispatch(CounterActionCreator.add(1));
+            await store.dispatch(CounterActionCreator.minus(2));
 
-            Assert.IsTrue((await store.getState()).Counter == 1);
+            Assert.IsTrue(state.Counter == 0);
+            Assert.IsTrue((await store.getState()).Counter == -1);
         }
     }
 }
