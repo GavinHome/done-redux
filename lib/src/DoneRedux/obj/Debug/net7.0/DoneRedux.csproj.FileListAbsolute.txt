@@ -10,15 +10,3 @@
 /Users/yangxiaoming/done-redux/lib/src/DoneRedux/obj/Debug/net7.0/refint/DoneRedux.dll
 /Users/yangxiaoming/done-redux/lib/src/DoneRedux/obj/Debug/net7.0/DoneRedux.pdb
 /Users/yangxiaoming/done-redux/lib/src/DoneRedux/obj/Debug/net7.0/ref/DoneRedux.dll
-F:\done-redux\lib\src\DoneRedux\bin\Debug\net7.0\DoneRedux.deps.json
-F:\done-redux\lib\src\DoneRedux\bin\Debug\net7.0\DoneRedux.dll
-F:\done-redux\lib\src\DoneRedux\bin\Debug\net7.0\DoneRedux.pdb
-F:\done-redux\lib\src\DoneRedux\obj\Debug\net7.0\DoneRedux.csproj.AssemblyReference.cache
-F:\done-redux\lib\src\DoneRedux\obj\Debug\net7.0\DoneRedux.GeneratedMSBuildEditorConfig.editorconfig
-F:\done-redux\lib\src\DoneRedux\obj\Debug\net7.0\DoneRedux.AssemblyInfoInputs.cache
-F:\done-redux\lib\src\DoneRedux\obj\Debug\net7.0\DoneRedux.AssemblyInfo.cs
-F:\done-redux\lib\src\DoneRedux\obj\Debug\net7.0\DoneRedux.csproj.CoreCompileInputs.cache
-F:\done-redux\lib\src\DoneRedux\obj\Debug\net7.0\DoneRedux.dll
-F:\done-redux\lib\src\DoneRedux\obj\Debug\net7.0\refint\DoneRedux.dll
-F:\done-redux\lib\src\DoneRedux\obj\Debug\net7.0\DoneRedux.pdb
-F:\done-redux\lib\src\DoneRedux\obj\Debug\net7.0\ref\DoneRedux.dll
