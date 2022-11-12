@@ -6,4 +6,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="utils\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="utils\" />
+  </ItemGroup>
 </Project>

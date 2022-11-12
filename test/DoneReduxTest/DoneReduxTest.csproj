@@ -16,4 +16,13 @@
     <PackageReference Include="coverlet.collector" Version="3.1.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\lib\src\DoneRedux\DoneRedux.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Counter\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Counter\" />
+  </ItemGroup>
 </Project>
