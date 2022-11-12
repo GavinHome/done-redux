@@ -90,4 +90,4 @@ lint/tmp/
 .vs
 *.user
 bin
-**/obj
+example/obj/**/*.*
