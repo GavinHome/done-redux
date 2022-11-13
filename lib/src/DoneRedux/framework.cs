@@ -26,6 +26,7 @@ public class Store<T>
         if (reducer != null)
         {
             this.state = reducer(state, action);
+
             await Task.Run(() =>
             {
                 foreach (var listener in listeners)
@@ -34,7 +35,19 @@ public class Store<T>
                 }
             });
         }
+
+        //if (effect != null)
+        //{
+        //    effect(action, new StoreContext<T>(this));
+        //}
     }
+
+
+    public async Task dispatch(Func<Action> func)
+    {
+        await this.dispatch(func());
+    }
+
 
     public async Task<T> getState()
     {
@@ -63,16 +76,21 @@ public class Store<T>
 public class Action
 {
     private readonly Object _type;
-    private readonly dynamic _payload;
+    private readonly dynamic? _payload;
 
-    public Action(Object type, dynamic payload)
+    public Action(Object type, dynamic? payload)
     {
         _type = type;
         _payload = payload;
     }
 
+    public Action(Object type)
+    {
+        _type = type;
+    }
+
     public Object Type { get { return _type; } }
-    public dynamic Payload { get { return _payload; } }
+    public dynamic? Payload { get { return _payload; } }
 
     public override bool Equals(object obj)
     {
@@ -93,7 +111,49 @@ public class Action
 
 /// Definition of the standard Reducer.
 /// If the Reducer needs to respond to the Action, it returns a new state, otherwise it returns the old state.
-public delegate T Reducer<T>(T state, Redux.Framework.Action action);
+public delegate T Reducer<T>(T state, Action action);
+
+/// Definition of the standard Dispatch.
+/// Send an "intention".
+public delegate dynamic Dispatch(Action action);
+
+/// Interrupt if not null not false
+/// bool for sync-functions, interrupted if true
+/// Future<void> for async-functions, should always be interrupted.
+public delegate dynamic Effect<T>(Action action, Context<T> ctx);
+
+///
+public delegate Task SubEffect<T>(Action action, Context<T> ctx);
+
+///  Seen in effect-part
+public abstract class Context<T>
+{
+    /// Get the latest state
+    public T? state { get; }
+
+    /// The way to send action, which will be consumed by self, or by broadcast-module and store.
+    public abstract Task<dynamic> dispatch(Action action);
+
+    ///// Get BuildContext from the host-widget
+    //public BuildContext? context { get; }
+}
+
+public class StoreContext<T> : Context<T>
+{
+    private Store<T> _store;
+    public StoreContext(Store<T> store)
+    {
+        this._store = store;
+    }
+
+    //public new T state { get; } = _store.getState();
+
+    public override async Task<dynamic> dispatch(Action action)
+    {
+        await this._store.dispatch(action);
+        return this;
+    }
+}
 
 
 public static class ReduxHelper
@@ -115,26 +175,25 @@ public static class ReduxHelper
         }
     }
 
-    //readonly static Object _SUB_EFFECT_RETURN_NULL = new Object();
+    readonly static Object _SUB_EFFECT_RETURN_NULL = new Object();
 
-    ///// for action.type which override it's == operator
-    //// return [UserEffecr]
-    //public static Effect<T>? combineEffects<T>(Dictionary<object, SubEffect<T>> map) => (map == null || !map.Any())
-    //    ? null : (Action action, Context<T> ctx) =>
-    //    {
-    //        SubEffect<T> subEffect = map.FirstOrDefault(entry => action.Type == entry.Key).Value;
-    //        if (subEffect != null)
-    //        {
-    //            return subEffect.Invoke(action, ctx) ?? _SUB_EFFECT_RETURN_NULL;
-    //        }
+    
+    public static Effect<T>? combineEffects<T>(Dictionary<object, SubEffect<T>> map) => (map == null || !map.Any())
+        ? null : (Action action, Context<T> ctx) =>
+        {
+            SubEffect<T> subEffect = map.FirstOrDefault(entry => action.Type.Equals(entry.Key)).Value;
+            if (subEffect != null)
+            {
+                return subEffect.Invoke(action, ctx) ?? _SUB_EFFECT_RETURN_NULL;
+            }
 
-    //        ////kip-lifecycle-actions
-    //        if (action.Type is Lifecycle)
-    //        {
-    //            return _SUB_EFFECT_RETURN_NULL;
-    //        }
+            ////kip-lifecycle-actions
+            //if (action.Type is Lifecycle)
+            //{
+            //    return _SUB_EFFECT_RETURN_NULL;
+            //}
 
-    //        ////no subEffect
-    //        return null;
-    //    };
+            ////no subEffect
+            return null;
+        };
 }

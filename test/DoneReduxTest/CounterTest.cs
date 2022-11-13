@@ -1,6 +1,7 @@
 using DoneReduxTest.Counter;
 using Redux.Framework;
 using Redux.Utils;
+using Action = Redux.Framework.Action;
 
 namespace DoneReduxTest
 {
@@ -12,7 +13,7 @@ namespace DoneReduxTest
         }
 
         [Test]
-        public async Task Test1()
+        public async Task ReducerTest()
         {
             var state = CounterState.initState();
             var store = Store<CounterState>.createStore(state, CounterReducer.buildReducer());
@@ -25,6 +26,8 @@ namespace DoneReduxTest
 
             await store.dispatch(CounterActionCreator.add(1));
             await store.dispatch(CounterActionCreator.minus(2));
+
+            //await store.dispatch(CounterActionCreator.onCompute);
 
             Assert.IsTrue(state.Counter == 0);
             Assert.IsTrue((await store.getState()).Counter == -1);

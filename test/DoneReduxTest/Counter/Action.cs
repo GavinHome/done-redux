@@ -6,6 +6,7 @@ internal enum CounterAction
 {
     add,
     minus,
+    onCompute,
 }
 
 internal class CounterActionCreator
@@ -19,5 +20,10 @@ internal class CounterActionCreator
     internal static Action minus(int payload)
     {
         return new Action(CounterAction.minus, payload);
+    }
+
+    internal static Action onCompute()
+    {
+        return new Action(CounterAction.onCompute);
     }
 }
