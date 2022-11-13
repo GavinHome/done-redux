@@ -8,8 +8,10 @@
 
   <ItemGroup>
     <None Remove="utils\" />
+    <None Remove="middleware\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="utils\" />
+    <Folder Include="middleware\" />
   </ItemGroup>
 </Project>

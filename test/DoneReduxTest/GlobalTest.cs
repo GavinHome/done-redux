@@ -15,34 +15,34 @@ namespace DoneReduxTest
         }
 
         [Test]
-        public async Task CombineReducerTest()
+        public void CombineReducerTest()
         {
             var state = GlobalState.initState();
             var reducers = buildReducer();
             
             var store = Store<GlobalState>.createStore(state, reducers);
 
-            await store.subscribe(async () =>
+            store.subscribe(() =>
             {
-                GlobalState lastState = await store.getState();
+                GlobalState lastState = store.getState();
                 Console.WriteLine($"count:{(lastState.Counter.Counter)}");
             });
 
-            await store.subscribe(async () =>
+            store.subscribe(() =>
             {
-                GlobalState lastState = await store.getState();
+                GlobalState lastState = store.getState();
                 Console.WriteLine($"id:{(lastState.Message.id)}, content:{lastState.Message.content}");
             });
 
-            await store.dispatch(CounterActionCreator.add(1));
-            await store.dispatch(CounterActionCreator.minus(2));
-            await store.dispatch(MessageActionCreator.modify(new MessageState(1, "helloword")));
+            store.dispatch(CounterActionCreator.add(1));
+            store.dispatch(CounterActionCreator.minus(2));
+            store.dispatch(MessageActionCreator.modify(new MessageState(1, "helloword")));
 
             Assert.IsTrue(state.Counter.Counter == 0);
             Assert.IsTrue(state.Message.id == 0 && state.Message.content == "test");
 
-            Assert.IsTrue((await store.getState()).Counter.Counter == -1);
-            Assert.IsTrue((await store.getState()).Message.id == 1 && (await store.getState()).Message.content == "helloworld");
+            Assert.IsTrue(store.getState().Counter.Counter == -1);
+            Assert.IsTrue(store.getState().Message.id == 1 && store.getState().Message.content == "helloworld");
         }
 
         Reducer<GlobalState> buildReducer()

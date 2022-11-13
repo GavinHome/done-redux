@@ -13,24 +13,29 @@ namespace DoneReduxTest
         }
 
         [Test]
-        public async Task ReducerTest()
+        public void ReducerTest()
         {
             var state = CounterState.initState();
-            var store = Store<CounterState>.createStore(state, CounterReducer.buildReducer());
+            var enhancers = Redux.Framework.Middleware.applyMiddleware<CounterState>(
+                Redux.Middleware.logMiddleware<CounterState>((state) => "counterstate", true, "CounterPage"),
+                Redux.Middleware.exceptionMiddleware<CounterState>("CounterPage"),
+                Redux.Middleware.performanceMiddleware<CounterState>(true, "CounterPage")
+            );
+            var store = Store<CounterState>.createStore(state, CounterReducer.buildReducer(), enhancers);
 
-            await store.subscribe(async () =>
+            store.subscribe(() =>
             {
-                CounterState lastState = await store.getState();
+                CounterState lastState = store.getState();
                 Console.WriteLine($"count:{(lastState.Counter)}");
             });
 
-            await store.dispatch(CounterActionCreator.add(1));
-            await store.dispatch(CounterActionCreator.minus(2));
+            store.dispatch(CounterActionCreator.add(1));
+            store.dispatch(CounterActionCreator.minus(2));
 
             //await store.dispatch(CounterActionCreator.onCompute);
 
             Assert.IsTrue(state.Counter == 0);
-            Assert.IsTrue((await store.getState()).Counter == -1);
+            Assert.IsTrue(store.getState().Counter == -1);
         }
     }
 }
