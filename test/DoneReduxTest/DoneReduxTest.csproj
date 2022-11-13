@@ -21,8 +21,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="Counter\" />
+    <None Remove="Message\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Counter\" />
+    <Folder Include="Message\" />
   </ItemGroup>
 </Project>

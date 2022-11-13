@@ -5,7 +5,7 @@ using Action = Redux.Framework.Action;
 
 namespace DoneReduxTest
 {
-    public class Tests
+    public class CounterTests
     {
         [SetUp]
         public void Setup()

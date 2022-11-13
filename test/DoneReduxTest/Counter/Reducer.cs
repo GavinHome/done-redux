@@ -12,7 +12,7 @@ public class CounterReducer
         var map = new Dictionary<Object, Reducer<CounterState>>();
         map.Add(CounterAction.add, _add);
         map.Add(CounterAction.minus, _minus);
-        return Redux.Framework.ReduxHelper.combineReducers<CounterState>(map);
+        return Redux.Framework.ReduxHelper.asReducers<CounterState>(map);
     }
 
     private static CounterState _minus(CounterState state, Action action)

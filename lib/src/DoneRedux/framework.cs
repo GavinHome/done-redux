@@ -1,4 +1,13 @@
-﻿namespace Redux.Framework;
+﻿using System.Reflection;
+using System.Xml.Linq;
+using DoneRedux.utils;
+
+namespace Redux.Framework;
+
+public interface IState
+{
+
+}
 
 public class Store<T>
 {
@@ -158,7 +167,7 @@ public class StoreContext<T> : Context<T>
 
 public static class ReduxHelper
 {
-    public static Reducer<T> combineReducers<T>(Dictionary<Object, Reducer<T>> map)
+    public static Reducer<T> asReducers<T>(Dictionary<Object, Reducer<T>> map)
     {
         if (map == null || !map.Any())
         {
@@ -174,6 +183,51 @@ public static class ReduxHelper
             };
         }
     }
+
+
+    //public static Reducer<T> combineReducers<T>(Dictionary<string, dynamic> map)
+    //{
+    //    if (map == null || !map.Any())
+    //    {
+    //        return null;
+    //    }
+    //    else
+    //    {
+    //        return (T state, Action action) =>
+    //        {
+    //            T nextState = state;
+    //            foreach (var group in map)
+    //            {
+    //                string? key = group.Key as string;
+    //                if (!string.IsNullOrEmpty(key))
+    //                {
+
+    //                    Type entityType = typeof(T);
+    //                    PropertyInfo? subStateProperty = entityType.GetProperty(key);
+    //                    Type? subStateType = subStateProperty?.PropertyType;
+    //                    var subStateValue = subStateProperty?.GetValue(state);
+
+    //                    if(subStateProperty != null && subStateType != null)
+    //                    {
+    //                        var subReducer = group.Value;
+    //                        //var ac = Activator.CreateInstance(typeof(Reducer<>).MakeGenericType(subStateType),);
+    //                        var m = subReducer.Method as System.Reflection.MethodInfo;
+    //                        //var r = m?.Invoke(null, );
+    //                        //var t = subReducer.Target as object;
+    //                        var func = Delegate.CreateDelegate(typeof(Reducer<>).MakeGenericType(subStateType),m);
+    //                        var newS = func.DynamicInvoke(subStateValue, action);
+
+    //                        var subNewState = subReducer(subStateValue, action);
+    //                        nextState.SetPropertyValue<T>(key, subNewState as object);
+    //                    }
+    //                }
+    //            }
+
+    //            return nextState;
+    //        };
+    //    }
+    //}
+
 
     readonly static Object _SUB_EFFECT_RETURN_NULL = new Object();
 
