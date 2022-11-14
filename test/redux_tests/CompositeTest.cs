@@ -1,13 +1,15 @@
-using System.Text.Json;
+using Counter;
+using Message;
 using Redux;
 using Redux.Basic;
-using Message;
-using Counter;
+using Redux.Dependencies.Basic;
+using System.Text.Json;
 
 namespace Composite;
 
 public class CompositeTests
 {
+
     [SetUp]
     public void Setup()
     {
@@ -17,7 +19,7 @@ public class CompositeTests
     public void Test()
     {
         var state = CompositeState.initState();
-        var reducers = buildReducer();
+        var reducers = CompositeReducer.buildReducer();
 
         var enhancers = Redux.Middleware.applyMiddleware<CompositeState>(
             Redux.Middlewares.logMiddleware<CompositeState>((state) => JsonSerializer.Serialize(state), "CompositeTests"),
@@ -25,7 +27,15 @@ public class CompositeTests
             Redux.Middlewares.performanceMiddleware<CompositeState>("CompositeTests")
         );
 
-        Store<CompositeState> store = Creator.createStore<CompositeState>(state, reducers, enhancers);
+        Dependencies<CompositeState> dependencies = new Dependencies<CompositeState>(
+            slots: new Dictionary<string, Dependent<CompositeState>>()
+            {
+                { "counter",  new CounterConnector().add(new CounterLogic())  },
+                { "message",  new MessageConnector().add(new MessageLogic())  }
+            }
+        );
+
+        Store<CompositeState> store = Creator.createStore<CompositeState>(state, reducers, enhancers, dependencies);
 
         store.Subscribe(() =>
         {
@@ -34,22 +44,21 @@ public class CompositeTests
         });
 
         store.Dispatch(CounterActionCreator.add(1));
-        store.Dispatch(CounterActionCreator.minus(2));
-        store.Dispatch(MessageActionCreator.modify(new { Id = 1, Content = "helloword" }));
 
-        Assert.IsTrue(state.Counter.Count == 0);
-        Assert.IsTrue(state.Message.Id == 0 && state.Message.Content == "test");
+        Assert.IsTrue(store.GetState().Counter.Count == 1);
+        Assert.IsTrue(store.GetState().Message.Id == 0 && store.GetState().Message.Content == "test");
+
+        store.Dispatch(CounterActionCreator.minus(2));
+
+        Assert.IsTrue(store.GetState().Counter.Count == -1);
+        Assert.IsTrue(store.GetState().Message.Id == 0 && store.GetState().Message.Content == "test");
+
+        store.Dispatch(MessageActionCreator.modify(new { Id = 1, Content = "helloworld" }));
 
         Assert.IsTrue(store.GetState().Counter.Count == -1);
         Assert.IsTrue(store.GetState().Message.Id == 1 && store.GetState().Message.Content == "helloworld");
-    }
 
-    Reducer<CompositeState> buildReducer()
-    {
-        ////var map = new Dictionary<string, dynamic>();
-        ////map.Add("Counter", CounterReducer.buildReducer());
-        ////map.Add("Message", MessageReducer.buildReducer());
-        ////return Redux.Framework.ReduxHelper.combineReducers<GlobalState>(map);
-        return null;
+        Assert.IsTrue(state.Counter.Count == 0);
+        Assert.IsTrue(state.Message.Id == 0 && state.Message.Content == "test");
     }
 }

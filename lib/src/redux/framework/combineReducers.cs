@@ -1,5 +1,6 @@
 ﻿using Redux.Basic;
 using System;
+using System.Security.Claims;
 
 namespace Redux;
 
@@ -31,7 +32,7 @@ public class Reducer
     }
 
     /// Combine an iterable of SubReducer<T> into one Reducer<T>
-    Reducer<T> combineSubReducers<T>(IList<SubReducer<T>> subReducers)
+    public static Reducer<T> combineSubReducers<T>(IList<SubReducer<T>> subReducers)
     {
         var notNullReducers = subReducers?.Where((SubReducer<T> r) => r != null)?.ToArray();
         if (notNullReducers == null || !notNullReducers.Any())
@@ -59,7 +60,7 @@ public class Reducer
     }
 
     /// Convert a super Reducer<Sup> to a sub Reducer<Sub>
-    Reducer<Sub> castReducer<Sub, Sup>(Reducer<Sup> sup) where Sub : Sup, class
+    Reducer<Sub> castReducer<Sub, Sup>(Reducer<Sup> sup) where Sub : class, Sup
     {
         return sup == null
             ? null

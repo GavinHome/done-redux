@@ -1,4 +1,5 @@
 ﻿using Redux.Basic;
+using Redux.Dependencies.Basic;
 
 namespace Redux;
 
@@ -21,5 +22,11 @@ public partial class Creator
     public static Store<T> createStore<T>(T preloadedState, Reducer<T> reducer, StoreEnhancer<T> enhancer)
     {
         return enhancer != null ? enhancer(createStore)(preloadedState, reducer) : createStore(preloadedState, reducer);
+    }
+
+    public static Store<T> createStore<T>(T preloadedState, Reducer<T> reducer, StoreEnhancer<T> enhancer, Dependencies<T> dependencies)
+    {
+        var combineReducers = Reducer.combineReducers(new List<Reducer<T>>() { reducer, dependencies.createReducer() });
+        return enhancer != null ? enhancer(createStore)(preloadedState, combineReducers) : createStore(preloadedState, reducer);
     }
 }
