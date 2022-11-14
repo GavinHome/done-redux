@@ -1,41 +1,41 @@
-using DoneReduxTest.Counter;
-using Redux.Framework;
-using Redux.Utils;
-using Action = Redux.Framework.Action;
+using System.Text.Json;
+using Redux.Basic;
+using Counter;
 
-namespace DoneReduxTest
+namespace Counter;
+
+public class CounterTests
 {
-    public class CounterTests
+    [SetUp]
+    public void Setup()
     {
-        [SetUp]
-        public void Setup()
+    }
+
+    [Test]
+    public void Test()
+    {
+        var state = CounterState.initState();
+
+        var enhancers = Redux.Middleware.applyMiddleware<CounterState>(
+            Redux.Middlewares.logMiddleware<CounterState>((state) => JsonSerializer.Serialize(state), "CounterTests"),
+            Redux.Middlewares.exceptionMiddleware<CounterState>("CounterTests"),
+            Redux.Middlewares.performanceMiddleware<CounterState>("CounterTests")
+        );
+
+        Store<CounterState> store = Redux.Creator.createStore<CounterState>(state, CounterReducer.buildReducer(), enhancers);
+
+        store.Subscribe(() =>
         {
-        }
+            CounterState lastState = store.GetState();
+            Console.WriteLine($"[Subscribe] last-state:{JsonSerializer.Serialize(lastState)}");
+        });
 
-        [Test]
-        public void ReducerTest()
-        {
-            var state = CounterState.initState();
-            var enhancers = Redux.Framework.Middleware.applyMiddleware<CounterState>(
-                Redux.Middleware.logMiddleware<CounterState>((state) => "counterstate", true, "CounterPage"),
-                Redux.Middleware.exceptionMiddleware<CounterState>("CounterPage"),
-                Redux.Middleware.performanceMiddleware<CounterState>(true, "CounterPage")
-            );
-            var store = Store<CounterState>.createStore(state, CounterReducer.buildReducer(), enhancers);
+        store.Dispatch(CounterActionCreator.add(1));
+        store.Dispatch(CounterActionCreator.minus(2));
 
-            store.subscribe(() =>
-            {
-                CounterState lastState = store.getState();
-                Console.WriteLine($"count:{(lastState.Counter)}");
-            });
+        ////await store.dispatch(CounterActionCreator.onCompute);
 
-            store.dispatch(CounterActionCreator.add(1));
-            store.dispatch(CounterActionCreator.minus(2));
-
-            //await store.dispatch(CounterActionCreator.onCompute);
-
-            Assert.IsTrue(state.Counter == 0);
-            Assert.IsTrue(store.getState().Counter == -1);
-        }
+        Assert.IsTrue(state.Count == 0);
+        Assert.IsTrue(store.GetState().Count == -1);
     }
 }

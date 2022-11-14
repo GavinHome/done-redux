@@ -1,18 +1,15 @@
-﻿using System;
-using Redux.Framework;
-
-namespace DoneReduxTest.Message;
+﻿namespace Message;
 
 [Serializable]
-public class MessageState
+internal class MessageState
 {
-    public int id { get; set; }
-    public string content { get; set; }
+    public int Id { get; set; }
+    public string Content { get; set; }
 
     public MessageState(int id, string content)
     {
-        this.id = id;
-        this.content = content;
+        this.Id = id;
+        this.Content = content;
     }
 
     public static MessageState initState()

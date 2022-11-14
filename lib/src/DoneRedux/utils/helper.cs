@@ -1,8 +1,5 @@
-﻿using System;
-using System.Reflection;
-using Redux.Framework;
-
-namespace DoneRedux.utils;
+﻿using System.Reflection;
+namespace DoneRedux.Utils;
 
 public static class Helper
 {

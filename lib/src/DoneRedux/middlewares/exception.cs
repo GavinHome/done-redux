@@ -1,14 +1,11 @@
-﻿using System;
-using Redux.Framework;
-using static System.Net.Mime.MediaTypeNames;
-using System.Threading;
-using System.Diagnostics;
+﻿using Redux.Basic;
+using Action = Redux.Basic.Action;
 
 namespace Redux;
 
 /// Middleware for print action dispatch.
 /// It works on debug mode.
-public partial class Middleware
+public partial class Middlewares
 {
     public static Middleware<T> exceptionMiddleware<T>(String tag = "done-redux")
     {
@@ -16,12 +13,10 @@ public partial class Middleware
             (Dispatch next) =>
             {
                 System.Action<Object> print = (Object obj) => Console.WriteLine(obj);
-                Dispatch exception = (Redux.Framework.Action action) =>
+                Dispatch exception = (Action action) =>
                 {
                     System.Action<Object> print = (Object obj) => Console.WriteLine(obj);
-
                     
-
                     try
                     {
                         next(action);

@@ -1,11 +1,9 @@
-﻿using System;
-
-namespace DoneReduxTest.Counter;
+﻿namespace Counter;
 
 [Serializable]
-public class CounterState
+internal class CounterState
 {
-    public int Counter { get; set; } = 0;
+    public int Count { get; set; } = 0;
 
     public static CounterState initState()
     {

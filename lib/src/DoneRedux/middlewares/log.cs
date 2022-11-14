@@ -1,22 +1,20 @@
-﻿using System;
-using Redux.Framework;
-using static System.Net.Mime.MediaTypeNames;
-using System.Threading;
+﻿using Redux.Basic;
+using Action = Redux.Basic.Action;
 
 namespace Redux;
 
 /// Middleware for print action dispatch.
 /// It works on debug mode.
-public partial class Middleware
+public partial class Middlewares
 {
-    public static Middleware<T> logMiddleware<T>(System.Func<T,String> monitor, bool isDebug, String tag = "done-redux")
+    public static Middleware<T> logMiddleware<T>(System.Func<T,String> monitor, String tag = "done-redux")
 	{
 		return (Dispatch Dispatch, Get<T> getState) =>
 			(Dispatch next) =>
 			{
                 System.Action<Object> print = (Object obj) => Console.WriteLine(obj);
 
-                Dispatch log = (Redux.Framework.Action action) =>
+                Dispatch log = (Action action) =>
                 {
                     print($"---------- [{tag}] ----------");
                     print($"[{tag}] {action.Type} {action.Payload}");
@@ -35,15 +33,15 @@ public partial class Middleware
                         print($"[{tag}] next-state: {monitor(nextState)}");
                     }
 
-                    //if (prevState == nextState)
-                    //{
-                    //    print($"[{tag}] warning: {action.type} has not been used.");
-                    //}
+                    ////if (prevState == nextState)
+                    ////{
+                    ////    print($"[{tag}] warning: {action.type} has not been used.");
+                    ////}
 
                     print($"========== [{tag}] ================");
                 };
 
-			    return isDebug ? log : next;
+			    return Aop.isDebug() ? log : next;
 			};
 	}
 }

@@ -1,12 +1,13 @@
 ﻿using System;
-namespace DoneReduxTest.Counter;
-using Action = Redux.Framework.Action;
+
+namespace Counter;
+using Action = Redux.Basic.Action;
 
 internal enum CounterAction
 {
     add,
     minus,
-    onCompute,
+    ////onCompute,
 }
 
 internal class CounterActionCreator
@@ -22,8 +23,8 @@ internal class CounterActionCreator
         return new Action(CounterAction.minus, payload);
     }
 
-    internal static Action onCompute()
-    {
-        return new Action(CounterAction.onCompute);
-    }
+    ////internal static Action onCompute()
+    ////{
+    ////    return new Action(CounterAction.onCompute);
+    ////}
 }
