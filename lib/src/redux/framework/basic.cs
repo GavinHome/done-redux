@@ -38,10 +38,22 @@ public delegate void Dispatch(Action action);
 
 /// Definition of a standard subscription function.
 /// input a subscriber and output an anti-subscription function.
-public delegate void Subscribe(System.Action callback);
+public delegate Unsubscribe Subscribe(System.Action callback);
 
-/////// Definition of ReplaceReducer
-//public delegate void ReplaceReducer<T>(Reducer<T> reducer);
+///// Definition of a standard un-subscription function.
+//public delegate void Unsubscribe();
+public class Unsubscribe
+{
+    public Func<bool> Cancel { get; private set; }
+
+    public Unsubscribe(Func<bool> cancel)
+    {
+        this.Cancel = cancel;
+    }
+}
+
+/// Definition of ReplaceReducer
+public delegate void ReplaceReducer<T>(Reducer<T> reducer);
 
 /////// Definition of the standard observable flow.
 //public delegate Stream Observable<T>();
@@ -56,7 +68,6 @@ public delegate T Composable<T>(T next);
 /// Definition of the standard Middleware.
 public delegate Composable<Dispatch> Middleware<T>(Dispatch dispatch, Get<T> getState);
 
-
 /// Definition of the standard Store.
 public class Store<T>
 {
@@ -67,10 +78,10 @@ public class Store<T>
     public Get<T> GetState => () => _state;
     public Dispatch Dispatch { get; set; }
 
-    public Subscribe? Subscribe { get; set; }
-    ////public Observable<T>? Observable { get; set; }
-    ////public ReplaceReducer<T>? ReplaceReducer { get; set; }
-    ////public Task<dynamic>? Teardown { get; set; }
+    public Subscribe Subscribe { get; set; }
+    ////public Observable<T> Observable { get; set; }
+    public ReplaceReducer<T> ReplaceReducer { get; private set; }
+    ////public Task<dynamic> Teardown { get; set; }
 
     public Store(T initState, Reducer<T> reducer)
     {
@@ -91,7 +102,13 @@ public class Store<T>
             }
         };
 
-        Subscribe = (listener) => _listeners.Add(listener);
+        Subscribe = (listener) =>
+        {
+            _listeners.Add(listener);
+            return new Unsubscribe(() => _listeners.Remove(listener));
+        };
+
+        ReplaceReducer = (nextReducer) => reducer = nextReducer;
     }
 }
 
