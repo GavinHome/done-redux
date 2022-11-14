@@ -12,7 +12,6 @@ internal enum CounterAction
 
 internal class CounterActionCreator
 {
-
     internal static Action add(int payload)
     {
         return new Action(CounterAction.add, payload);
@@ -28,3 +27,17 @@ internal class CounterActionCreator
     ////    return new Action(CounterAction.onCompute);
     ////}
 }
+
+////internal class CounterActionCreators
+////{
+
+////    internal Action add(int payload)
+////    {
+////        return new Action(CounterAction.add, payload);
+////    }
+
+////    internal Action minus(int payload)
+////    {
+////        return new Action(CounterAction.minus, payload);
+////    }
+////}

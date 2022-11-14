@@ -1,53 +1,72 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Redux.Basic;
+using System;
 
 namespace Redux;
 
 public class Reducer
 {
-    ////public static Reducer<T> combineReducers<T>(Dictionary<string, dynamic> map)
-    ////{
-    ////    if (map == null || !map.Any())
-    ////    {
-    ////        return null;
-    ////    }
-    ////    else
-    ////    {
-    ////        return (T state, Action action) =>
-    ////        {
-    ////            T nextState = state;
-    ////            foreach (var group in map)
-    ////            {
-    ////                string? key = group.Key as string;
-    ////                if (!string.IsNullOrEmpty(key))
-    ////                {
+    public static Reducer<T> combineReducers<T>(IList<Reducer<T>> reducers)
+    {
+        var notNullReducers = reducers?.Where((Reducer<T> r) => r != null)?.ToArray();
+        if (notNullReducers == null || !notNullReducers.Any())
+        {
+            return null;
+        }
 
-    ////                    Type entityType = typeof(T);
-    ////                    PropertyInfo? subStateProperty = entityType.GetProperty(key);
-    ////                    Type? subStateType = subStateProperty?.PropertyType;
-    ////                    var subStateValue = subStateProperty?.GetValue(state);
+        if (notNullReducers.Length == 1)
+        {
+            return notNullReducers.Single();
+        }
 
-    ////                    if(subStateProperty != null && subStateType != null)
-    ////                    {
-    ////                        var subReducer = group.Value;
-    ////                        //var ac = Activator.CreateInstance(typeof(Reducer<>).MakeGenericType(subStateType),);
-    ////                        var m = subReducer.Method as System.Reflection.MethodInfo;
-    ////                        //var r = m?.Invoke(null, );
-    ////                        //var t = subReducer.Target as object;
-    ////                        var func = Delegate.CreateDelegate(typeof(Reducer<>).MakeGenericType(subStateType),m);
-    ////                        var newS = func.DynamicInvoke(subStateValue, action);
+        return (T state, Redux.Basic.Action action) =>
+        {
+            T nextState = state;
+            foreach (Reducer<T> reducer in notNullReducers)
+            {
+                nextState = reducer(nextState, action);
+            }
 
-    ////                        var subNewState = subReducer(subStateValue, action);
-    ////                        nextState.SetPropertyValue<T>(key, subNewState as object);
-    ////                    }
-    ////                }
-    ////            }
+            return nextState;
+        };
+    }
 
-    ////            return nextState;
-    ////        };
-    ////    }
-    ////}
+    /// Combine an iterable of SubReducer<T> into one Reducer<T>
+    Reducer<T> combineSubReducers<T>(IList<SubReducer<T>> subReducers)
+    {
+        var notNullReducers = subReducers?.Where((SubReducer<T> r) => r != null)?.ToArray();
+        if (notNullReducers == null || !notNullReducers.Any())
+        {
+            return null;
+        }
+
+        if (notNullReducers.Length == 1)
+        {
+            SubReducer<T> single = notNullReducers.Single();
+            return (T state, Redux.Basic.Action action) => single(state, action, false);
+        }
+
+        return (T state, Redux.Basic.Action action) =>
+        {
+            T copy = state;
+            bool hasChanged = false;
+            foreach (SubReducer<T> subReducer in notNullReducers)
+            {
+                copy = subReducer(copy, action, hasChanged);
+                hasChanged = hasChanged || !EqualityComparer<T>.Default.Equals(copy, state); //copy != state
+            }
+            return copy;
+        };
+    }
+
+    /// Convert a super Reducer<Sup> to a sub Reducer<Sub>
+    Reducer<Sub> castReducer<Sub, Sup>(Reducer<Sup> sup) where Sub : Sup, class
+    {
+        return sup == null
+            ? null
+            : (Sub state, Redux.Basic.Action action) =>
+            {
+                Sub result = sup(state, action) as Sub;
+                return result;
+            };
+    }
 }
