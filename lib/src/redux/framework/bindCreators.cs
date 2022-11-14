@@ -26,7 +26,6 @@ public static class bindCreator
 
     public static void Dispatch(this Redux.Basic.Action action, Dispatch dispatch) => dispatch(action);
 
-    ////TODO: Task 1
     ////public static T bindActionCreators<T>(T instance, Dispatch dispatch)
     ////{
     ////    Type type = typeof(T);

@@ -58,7 +58,7 @@ public class Dependencies<T>
     public Dependencies<T>? trim() => (adapter != null || (slots?.Any() ?? false)) ? this : null;
 }
 
-///////TODO: Task2
+///////TODO: ListAdapter
 /////// Define a base ListAdapter which is used for ListView.builder.
 /////// Many small listAdapters could be merged to a bigger one.
 ////class ListAdapter
