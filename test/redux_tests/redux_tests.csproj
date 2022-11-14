@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
@@ -20,10 +20,6 @@
     <PackageReference Include="NUnit.Analyzers" Version="3.3.0" />
     <PackageReference Include="coverlet.collector" Version="3.1.2" />
   </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\lib\src\DoneRedux\DoneRedux.csproj" />
-  </ItemGroup>
   <ItemGroup>
     <None Remove="Counter\" />
     <None Remove="Message\" />
@@ -31,5 +27,8 @@
   <ItemGroup>
     <Folder Include="Counter\" />
     <Folder Include="Message\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\lib\src\redux\redux.csproj" />
   </ItemGroup>
 </Project>

@@ -1,5 +1,5 @@
 ﻿using System.Reflection;
-namespace DoneRedux.Utils;
+namespace Redux.Utils;
 
 public static class Helper
 {

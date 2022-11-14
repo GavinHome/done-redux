@@ -6,7 +6,7 @@ using Counter;
 
 namespace Composite;
 
-public class GlobalTests
+public class CompositeTests
 {
     [SetUp]
     public void Setup()
