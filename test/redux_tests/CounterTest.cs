@@ -70,7 +70,7 @@ public class CounterTests
     }
 
     [Test]
-    public void TestBindCreators()
+    public void TestBindCreator()
     {
         var state = CounterState.initState();
 
@@ -88,17 +88,19 @@ public class CounterTests
             Console.WriteLine($"[Subscribe] last-state:{JsonSerializer.Serialize(lastState)}");
         });
 
-
-        //store.Dispatch(CounterActionCreator.add(1));
-        var add = bindCreator.bindActionCreator<int>(CounterActionCreator.add, store.Dispatch);
+        ////store.Dispatch(CounterActionCreator.add(1));
+        var add = ActionCreator.bind<int>(CounterActionCreator.add, store.Dispatch);
         add(1);
 
-        //store.Dispatch(CounterActionCreator.minus(2));
-        CounterActionCreator.minus(2).Dispatch(store.Dispatch);
+        var addAction = ActionCreator.bindAction<int>(CounterActionCreator.add, store.Dispatch);
+        var action = addAction(1);
+        Assert.IsTrue(action.Type.Equals(CounterAction.add));
+        Assert.IsTrue(action.Payload == 1);
 
-        ////TODO: invoke class member
-        ////CounterActionCreators obj = bindCreator.bindActionCreators<CounterActionCreators>(new CounterActionCreators(), store.Dispatch);
-        ////obj.add(1);
+        //store.Dispatch(CounterActionCreator.minus(2));
+        //CounterActionCreator.minus(2).Dispatch(store.Dispatch);
+        var minus = ActionCreator.bindAction(CounterActionCreator.minus(3), store.Dispatch);
+        minus();
 
         Assert.IsTrue(state.Count == 0);
         Assert.IsTrue(store.GetState().Count == -1);

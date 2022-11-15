@@ -28,16 +28,25 @@ internal class CounterActionCreator
     ////}
 }
 
-////internal class CounterActionCreators
-////{
+internal class CounterActionCreators
+{
+    internal Action add(int payload)
+    {
+        return new Action(CounterAction.add, payload);
+    }
 
-////    internal Action add(int payload)
-////    {
-////        return new Action(CounterAction.add, payload);
-////    }
+    internal Action minus(int payload)
+    {
+        return new Action(CounterAction.minus, payload);
+    }
 
-////    internal Action minus(int payload)
-////    {
-////        return new Action(CounterAction.minus, payload);
-////    }
-////}
+    internal static Action add1(int payload)
+    {
+        return new Action(CounterAction.add, payload);
+    }
+
+    internal static Action minus1(int payload)
+    {
+        return new Action(CounterAction.minus, payload);
+    }
+}
