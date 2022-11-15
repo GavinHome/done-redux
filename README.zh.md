@@ -4,33 +4,32 @@
 
 
 
-## What is Done Redux?
+## 介绍
 
-Done Redux is an assembled state management framework based on Redux and .Net7
-It is suitable for building any applications.
+Done Redux 是基于Redux思想的组合式状态管理框架，非常适合构建基于.NET7的应用程序，即Donet Redux。
 
-It has four characteristics:
+它有四个优势：
 
-> 1. Functional Programming
+> 1. 函数式编程
 
-> 2. Predictable state
+> 2. 可预测状态容器
 
-> 3. Componentization
+> 3. 组件化
 
-> 4. Flexible assembly
-
-
-
-## Documentation
-
-Language: [English](README.md) | [Chinese](doc/README.zh.md)
+> 4. 灵活装配
 
 
 
-## Installation
+## 文档
 
--   Initialization state, reducer, container
--   Monitor subscriptions and initiate commands
+语言: [英文](README.md) | [中文简体](doc/README.zh.md)
+
+
+
+## 使用
+
+-   初始化状态，Reducer，容器；
+-   监听订阅，发起指令
 
 ```c#
 var state = CounterState.initState();
@@ -105,14 +104,17 @@ internal class CounterState
 
 
 
-## Example
+## 例子
 
--   [Counter](test/redux_tests/Counter) - a simple counter demo.
--   [Composite](test/redux_tests/Composite) - a composite demo .
--   [Todo List](test/redux_tests/TodoList) - a simple todo list demo.
+- [Counter](test/redux_tests/Counter) - 一个简单的计数器例子.
 
+- [Composite](test/redux_tests/Composite) - 一个组合计数器和消息内容到一个整体状态容器中的例子.
 
+- [Todo List](test/redux_tests/TodoList) - 一个简单的待办例子.
+
+  
 
 ## License
 
 [License](LICENSE)
+
