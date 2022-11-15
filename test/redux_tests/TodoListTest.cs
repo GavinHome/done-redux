@@ -48,7 +48,7 @@ public class TodoListTest
                 new Todo.ToDoState(
                     "3",
                     "Hello Done Redux",
-                    "Learn how to use Fish Redux in a flutter application.",
+                    "Learn how to use Done Redux in a maui application.",
                     true
                 )
             )
