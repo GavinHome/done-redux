@@ -9,6 +9,12 @@ internal class CompositeState
     public CounterState Counter { get; set; }
     public MessageState Message { get; set; }
 
+    public CompositeState()
+    {
+        Counter = new CounterState();
+        Message = new MessageState();
+    }
+
     public static CompositeState initState()
     {
         return new CompositeState()

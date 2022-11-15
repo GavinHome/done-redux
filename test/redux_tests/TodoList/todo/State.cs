@@ -1,11 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Message;
 
-namespace TodoList;
+namespace Todo;
 
+[Serializable]
 internal class ToDoState
 {
+    public String Id { get; set; }
+    public String Title { get; set; }
+    public String Desc { get; set; }
+    public bool IsDone { get; set; }
+
+    public ToDoState(String id, String title, String desc, bool isDone)
+    {
+        this.Id = id;
+        this.Title = title;
+        this.Desc = desc;
+        this.IsDone = isDone;
+    }
+
+    public String toString()
+    {
+        return $"ToDoState id: {Id}, title: {Title}, desc: {Desc}, isDone: {IsDone}";
+    }
 }

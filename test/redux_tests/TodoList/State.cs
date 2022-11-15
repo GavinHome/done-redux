@@ -1,11 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Todo;
 
 namespace TodoList;
 
-internal class ToDoListState
+[Serializable]
+internal class TodoListState
 {
+    public List<ToDoState>? toDos { get; set; }
+
+    internal static TodoListState initState()
+    {
+        //just demo, do nothing here...
+        return new TodoListState();
+    }
 }

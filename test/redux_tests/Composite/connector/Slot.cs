@@ -1,7 +1,11 @@
 ﻿using Counter;
 using Message;
 using Redux.Basic;
+using Redux.Component;
 using Redux.Connector;
+using Redux.Dependencies;
+using System.ComponentModel;
+using Todo;
 
 namespace Composite;
 
@@ -18,11 +22,6 @@ internal class CounterConnector : ConnOp<CompositeState, CounterState>
     }
 }
 
-internal class CounterLogic : AbstractLogic<CounterState>
-{
-    public override Reducer<CounterState> createReducer() => CounterReducer.buildReducer();
-}
-
 internal class MessageConnector : ConnOp<CompositeState, MessageState>
 {
     public override MessageState Get(CompositeState state)
@@ -34,9 +33,4 @@ internal class MessageConnector : ConnOp<CompositeState, MessageState>
     {
         state.Message = subState;
     }
-}
-
-internal class MessageLogic : AbstractLogic<MessageState>
-{
-    public override Reducer<MessageState> createReducer() => MessageReducer.buildReducer();
 }

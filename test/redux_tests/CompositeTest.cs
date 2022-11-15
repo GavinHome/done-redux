@@ -30,8 +30,8 @@ public class CompositeTests
         Dependencies<CompositeState> dependencies = new Dependencies<CompositeState>(
             slots: new Dictionary<string, Dependent<CompositeState>>()
             {
-                { "counter",  new CounterConnector().add(new CounterLogic())  },
-                { "message",  new MessageConnector().add(new MessageLogic())  }
+                { "counter",  new CounterConnector().add(new CounterComponent())  },
+                { "message",  new MessageConnector().add(new MessageComponent())  }
             }
         );
 

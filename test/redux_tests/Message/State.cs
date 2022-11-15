@@ -6,6 +6,8 @@ internal class MessageState
     public int Id { get; set; }
     public string Content { get; set; }
 
+    public MessageState() { }
+
     public MessageState(int id, string content)
     {
         this.Id = id;

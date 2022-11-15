@@ -5,7 +5,3 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace TodoList;
-
-internal class Action
-{
-}

@@ -1,15 +1,21 @@
-﻿using Redux.Basic;
+﻿using Redux.Adapter;
+using Redux.Basic;
+using Redux.Connector;
+using Redux.Effect;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
+using System.Runtime.Intrinsics.Arm;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Collections.Specialized.BitVector32;
 using static System.Reflection.Metadata.BlobBuilder;
 
 namespace Redux.Dependencies.Basic;
 
 /// Representation of each dependency
-public abstract class Dependent<T>
+public abstract class Dependent<T> //: AbstractAdapterBuilder<T>
 {
     public abstract Get<Object> subGetter(Get<T> getter);
 
@@ -58,21 +64,49 @@ public class Dependencies<T>
     public Dependencies<T>? trim() => (adapter != null || (slots?.Any() ?? false)) ? this : null;
 }
 
-///////TODO: ListAdapter
-/////// Define a base ListAdapter which is used for ListView.builder.
-/////// Many small listAdapters could be merged to a bigger one.
-////class ListAdapter
-////{
-////    private int itemCount;
-////    private System.Func<int, dynamic> itemBuilder;
+public delegate Dependent<T> IndexedDependentBuilder<T>(int index);
 
-////    ListAdapter(int itemCount, Func<int, dynamic> itemBuilder)
-////    {
-////        this.itemBuilder = itemBuilder; this.itemCount = itemCount;
-////    }
-////}
+public class DependentArray<T>
+{
+    public IndexedDependentBuilder<T> builder;
+    public int length;
 
-////abstract class AbstractAdapterBuilder<T>
-////{
-////    //ListAdapter buildAdapter(ContextSys<T> ctx);
-////}
+    public DependentArray(IndexedDependentBuilder<T> builder, int length)
+    {
+        this.builder = builder;
+        this.length = length;
+    }
+
+    public Dependent<T> Get(int index) => builder(index);
+}
+
+public class FlowDependencies<T>
+{
+    public FlowAdapterView<T> build;
+
+    public FlowDependencies(FlowAdapterView<T> build)
+    {
+        this.build = build;
+    }
+
+    public Reducer<T> createReducer() => (T state, Redux.Basic.Action action) =>
+    {
+        T copy = state;
+        bool hasChanged = false;
+        DependentArray<T> list = build(state);
+        if (list != null)
+        {
+            for (int i = 0; i < list.length; i++)
+            {
+                Dependent<T> dep = list.Get(i);
+                SubReducer<T>? subReducer = dep?.createSubReducer();
+                if (subReducer != null)
+                {
+                    copy = subReducer(copy, action, hasChanged);
+                    hasChanged = hasChanged || !EqualityComparer<T>.Default.Equals(copy, state); //copy != state;
+                }
+            }
+        }
+        return copy;
+    };
+}
