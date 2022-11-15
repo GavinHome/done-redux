@@ -32,7 +32,7 @@ public abstract class Logic<T> : AbstractLogic<T>
 
     protected virtual Reducer<T> protectedReducer => _reducer;
 
-    protected virtual Dependencies<T> protectedDependencies => _dependencies;
+    protected virtual Dependencies<T>? protectedDependencies => _dependencies;
 
     protected virtual Reducer<T> protectedDependenciesReducer => protectedDependencies?.createReducer();
 

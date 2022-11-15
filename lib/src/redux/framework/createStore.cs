@@ -19,12 +19,12 @@ public partial class Creator
     }
 
     /// create a store with enhancer
-    public static Store<T> createStore<T>(T preloadedState, Reducer<T> reducer, StoreEnhancer<T> enhancer)
+    public static Store<T> createStore<T>(T preloadedState, Reducer<T> reducer, StoreEnhancer<T>? enhancer)
     {
         return enhancer != null ? enhancer(createStore)(preloadedState, reducer) : createStore(preloadedState, reducer);
     }
 
-    public static Store<T> createStore<T>(T preloadedState, Reducer<T> reducer, StoreEnhancer<T> enhancer, Dependencies<T> dependencies)
+    public static Store<T> createStore<T>(T preloadedState, Reducer<T> reducer, StoreEnhancer<T>? enhancer, Dependencies<T> dependencies)
     {
         var combineReducers = Reducer.combineReducers(new List<Reducer<T>>() { reducer, dependencies.createReducer() });
         return enhancer != null ? enhancer(createStore)(preloadedState, combineReducers) : createStore(preloadedState, reducer);

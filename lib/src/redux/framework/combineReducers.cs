@@ -60,13 +60,13 @@ public class Reducer
     }
 
     /// Convert a super Reducer<Sup> to a sub Reducer<Sub>
-    Reducer<Sub> castReducer<Sub, Sup>(Reducer<Sup> sup) where Sub : class, Sup
+    Reducer<Sub>? castReducer<Sub, Sup>(Reducer<Sup> sup) where Sub : class, Sup
     {
         return sup == null
             ? null
             : (Sub state, Redux.Basic.Action action) =>
             {
-                Sub result = sup(state, action) as Sub;
+                Sub? result = sup(state, action) as Sub;
                 return result;
             };
     }

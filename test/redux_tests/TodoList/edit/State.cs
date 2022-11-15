@@ -9,5 +9,5 @@ namespace TodoList;
 
 internal class ToDoEditState
 {
-    public ToDoState toDo { get; set; }
+    public ToDoState? toDo { get; set; }
 }

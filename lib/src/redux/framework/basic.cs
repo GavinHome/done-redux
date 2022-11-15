@@ -21,7 +21,7 @@ public class Action
     public object Type { get { return _type; } }
     public dynamic? Payload { get { return _payload; } }
 
-    public override bool Equals(object obj) => obj != null && Equals(other: obj as Action);
+    public override bool Equals(object? obj) => obj != null && Equals(other: obj as Action);
 
     public bool Equals(Action? other) => other != null && _type == other.Type;
 

@@ -8,7 +8,7 @@ public class Middleware
     ///// Accumulate a list of Middleware that enhances Dispatch to the Store.
     ///// The wrapped direction of the Store.dispatch is from inside to outside.
 
-    public static StoreEnhancer<T> applyMiddleware<T>(params Middleware<T>[] middlewares)
+    public static StoreEnhancer<T>? applyMiddleware<T>(params Middleware<T>[] middlewares)
     {
         StoreEnhancer<T> inner = (StoreCreator<T> creator) => (T initState, Reducer<T> reducer) =>
         {

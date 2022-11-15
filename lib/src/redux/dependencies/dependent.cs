@@ -8,7 +8,7 @@ public class _Dependent<T, P> : Dependent<T>
 {
     AbstractConnector<T, P> connector;
     AbstractLogic<P> logic;
-    SubReducer<T> subReducer;
+    SubReducer<T>? subReducer;
 
     public _Dependent(AbstractLogic<P> logic, AbstractConnector<T, P> connector)
     {
