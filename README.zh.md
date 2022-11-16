@@ -1,6 +1,6 @@
 <h1>Done Redux</h1>
 
-[![Build Status](https://travis-ci.org/gavinhome/done-redux.svg?branch=master)](https://travis-ci.org/gavinhome/done-redux) [![codecov](https://codecov.io/gh/gavinhome/done-redux/branch/master/graph/badge.svg)](https://codecov.io/gh/gvinhome/done-redux)
+[![build](https://github.com/GavinHome/done-redux/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/GavinHome/done-redux/actions/workflows/build.yml)[![codecov](https://codecov.io/gh/gavinhome/done-redux/branch/master/graph/badge.svg)](https://codecov.io/gh/gvinhome/done-redux)
 
 
 
