@@ -18,5 +18,3 @@ public class CounterEffect
         await ctx.Dispatch(CounterActionCreator.minus(2));
     }
 }
-
-

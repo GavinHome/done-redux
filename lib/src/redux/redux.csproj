@@ -21,10 +21,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="maui\listAdapter.cs" />
+    <Compile Remove="maui\widget.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="utils\" />
     <None Remove="middleware\" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="maui\" />
     <Folder Include="middlewares\" />
   </ItemGroup>
 </Project>
