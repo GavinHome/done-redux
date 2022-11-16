@@ -114,3 +114,4 @@ Version.cpp
 */**/bin/Release
 */**/obj/Debug
 */**/obj/Release
+.vscode
