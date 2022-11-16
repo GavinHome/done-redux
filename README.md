@@ -13,7 +13,7 @@ It has four characteristics:
 
 > 1. Functional Programming
 
-> 2. Predictable state
+> 2. Predictable State
 
 > 3. Componentization
 
