@@ -1,7 +1,0 @@
-language: csharp
-mono: none
-dotnet: 7.0.100
-solution: done-redux.sln
-script:
-  - dotnet restore
-  - dotnet build
