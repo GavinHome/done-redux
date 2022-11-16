@@ -15,6 +15,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="effect\**" />
+    <EmbeddedResource Remove="effect\**" />
+    <None Remove="effect\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="utils\" />
     <None Remove="middleware\" />
   </ItemGroup>
