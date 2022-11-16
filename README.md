@@ -30,7 +30,8 @@ Language: [English](README.md) | [Chinese](README.zh.md)
 ## Installation
 
 -   Initialization state, reducer, container
--   Monitor subscriptions and initiate commands
+-   Monitor subscriptions 
+-   initiate commands
 
 ````c#
 var state = CounterState.initState();
