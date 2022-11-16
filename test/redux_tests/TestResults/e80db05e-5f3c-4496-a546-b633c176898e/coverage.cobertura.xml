@@ -1,0 +1,1938 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<coverage line-rate="0.6586" branch-rate="0.5853" version="1.9" timestamp="1668582808" lines-covered="303" lines-valid="460" branches-covered="96" branches-valid="164">
+  <sources>
+    <source>F:\done-redux\lib\src\redux\</source>
+  </sources>
+  <packages>
+    <package name="redux" line-rate="0.6586" branch-rate="0.5853" complexity="219">
+      <classes>
+        <class name="Redux.Aop" filename="aop\debug.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="isDebug" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="12" branch="False" />
+                <line number="10" hits="12" branch="False" />
+                <line number="11" hits="12" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="9" hits="12" branch="False" />
+            <line number="10" hits="12" branch="False" />
+            <line number="11" hits="12" branch="False" />
+          </lines>
+        </class>
+        <class name="Redux.Helper" filename="effect\helper.cs" line-rate="0" branch-rate="0" complexity="9">
+          <methods>
+            <method name="combineEffects" signature="(System.Collections.Generic.Dictionary`2&lt;System.Object,Redux.Effect.SubEffect`1&lt;T&gt;&gt;)" line-rate="0" branch-rate="0" complexity="8">
+              <lines>
+                <line number="11" hits="0" branch="True" condition-coverage="0% (0/4)">
+                  <conditions>
+                    <condition number="19" type="jump" coverage="0%" />
+                    <condition number="32" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="12" hits="0" branch="False" />
+                <line number="13" hits="0" branch="False" />
+                <line number="14" hits="0" branch="False" />
+                <line number="15" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="52" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="16" hits="0" branch="False" />
+                <line number="17" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="69" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="18" hits="0" branch="False" />
+                <line number="19" hits="0" branch="False" />
+                <line number="20" hits="0" branch="False" />
+                <line number="21" hits="0" branch="False" />
+                <line number="22" hits="0" branch="False" />
+                <line number="23" hits="0" branch="False" />
+                <line number="24" hits="0" branch="False" />
+                <line number="25" hits="0" branch="False" />
+                <line number="26" hits="0" branch="False" />
+                <line number="27" hits="0" branch="False" />
+                <line number="28" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name=".cctor" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="11" hits="0" branch="True" condition-coverage="0% (0/4)">
+              <conditions>
+                <condition number="19" type="jump" coverage="0%" />
+                <condition number="32" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="12" hits="0" branch="False" />
+            <line number="13" hits="0" branch="False" />
+            <line number="14" hits="0" branch="False" />
+            <line number="15" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="52" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="16" hits="0" branch="False" />
+            <line number="17" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="69" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="18" hits="0" branch="False" />
+            <line number="19" hits="0" branch="False" />
+            <line number="20" hits="0" branch="False" />
+            <line number="21" hits="0" branch="False" />
+            <line number="22" hits="0" branch="False" />
+            <line number="23" hits="0" branch="False" />
+            <line number="24" hits="0" branch="False" />
+            <line number="25" hits="0" branch="False" />
+            <line number="26" hits="0" branch="False" />
+            <line number="27" hits="0" branch="False" />
+            <line number="28" hits="0" branch="False" />
+            <line number="9" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="Redux.Helper" filename="framework\helper.cs" line-rate="0.8332999999999999" branch-rate="0.6666" complexity="6">
+          <methods>
+            <method name="asReducers" signature="(System.Collections.Generic.Dictionary`2&lt;System.Object,Redux.Basic.Reducer`1&lt;T&gt;&gt;)" line-rate="0.8332999999999999" branch-rate="0.6666" complexity="6">
+              <lines>
+                <line number="8" hits="23" branch="False" />
+                <line number="9" hits="23" branch="True" condition-coverage="50% (2/4)">
+                  <conditions>
+                    <condition number="20" type="jump" coverage="50%" />
+                    <condition number="41" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="10" hits="0" branch="False" />
+                <line number="11" hits="0" branch="False" />
+                <line number="14" hits="23" branch="False" />
+                <line number="15" hits="23" branch="False" />
+                <line number="16" hits="39" branch="False" />
+                <line number="17" hits="100" branch="False" />
+                <line number="18" hits="75" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="52" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="19" hits="21" branch="False" />
+                <line number="20" hits="62" branch="False" />
+                <line number="22" hits="23" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="8" hits="23" branch="False" />
+            <line number="9" hits="23" branch="True" condition-coverage="50% (2/4)">
+              <conditions>
+                <condition number="20" type="jump" coverage="50%" />
+                <condition number="41" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="10" hits="0" branch="False" />
+            <line number="11" hits="0" branch="False" />
+            <line number="14" hits="23" branch="False" />
+            <line number="15" hits="23" branch="False" />
+            <line number="16" hits="39" branch="False" />
+            <line number="17" hits="100" branch="False" />
+            <line number="18" hits="75" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="52" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="19" hits="21" branch="False" />
+            <line number="20" hits="62" branch="False" />
+            <line number="22" hits="23" branch="False" />
+          </lines>
+        </class>
+        <class name="Redux.Middleware" filename="framework\applyMiddleware.cs" line-rate="0.7894" branch-rate="0.8" complexity="10">
+          <methods>
+            <method name="applyMiddleware" signature="(Redux.Basic.Middleware`1&lt;T&gt;[])" line-rate="0.7894" branch-rate="0.8" complexity="10">
+              <lines>
+                <line number="12" hits="6" branch="False" />
+                <line number="13" hits="12" branch="False" />
+                <line number="14" hits="6" branch="False" />
+                <line number="15" hits="6" branch="False" />
+                <line number="16" hits="6" branch="False" />
+                <line number="17" hits="6" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="50" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="18" hits="0" branch="False" />
+                <line number="19" hits="0" branch="False" />
+                <line number="20" hits="0" branch="False" />
+                <line number="21" hits="6" branch="False" />
+                <line number="22" hits="24" branch="True" condition-coverage="100% (4/4)">
+                  <conditions>
+                    <condition number="122" type="jump" coverage="100%" />
+                    <condition number="8" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="23" hits="0" branch="False" />
+                <line number="24" hits="24" branch="False" />
+                <line number="25" hits="24" branch="False" />
+                <line number="26" hits="24" branch="False" />
+                <line number="27" hits="6" branch="False" />
+                <line number="28" hits="18" branch="False" />
+                <line number="30" hits="6" branch="True" condition-coverage="50% (2/4)">
+                  <conditions>
+                    <condition number="33" type="jump" coverage="50%" />
+                    <condition number="46" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="31" hits="6" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="12" hits="6" branch="False" />
+            <line number="13" hits="12" branch="False" />
+            <line number="14" hits="6" branch="False" />
+            <line number="15" hits="6" branch="False" />
+            <line number="16" hits="6" branch="False" />
+            <line number="17" hits="6" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="50" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="18" hits="0" branch="False" />
+            <line number="19" hits="0" branch="False" />
+            <line number="20" hits="0" branch="False" />
+            <line number="21" hits="6" branch="False" />
+            <line number="22" hits="24" branch="True" condition-coverage="100% (4/4)">
+              <conditions>
+                <condition number="122" type="jump" coverage="100%" />
+                <condition number="8" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="23" hits="0" branch="False" />
+            <line number="24" hits="24" branch="False" />
+            <line number="25" hits="24" branch="False" />
+            <line number="26" hits="24" branch="False" />
+            <line number="27" hits="6" branch="False" />
+            <line number="28" hits="18" branch="False" />
+            <line number="30" hits="6" branch="True" condition-coverage="50% (2/4)">
+              <conditions>
+                <condition number="33" type="jump" coverage="50%" />
+                <condition number="46" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="31" hits="6" branch="False" />
+          </lines>
+        </class>
+        <class name="Redux.Reducer" filename="framework\combineReducers.cs" line-rate="0.7345999999999999" branch-rate="0.6875" complexity="32">
+          <methods>
+            <method name="combineReducers" signature="(System.Collections.Generic.IList`1&lt;Redux.Basic.Reducer`1&lt;T&gt;&gt;)" line-rate="0.8946999999999999" branch-rate="0.7142000000000001" complexity="14">
+              <lines>
+                <line number="10" hits="21" branch="False" />
+                <line number="11" hits="61" branch="True" condition-coverage="66.66% (4/6)">
+                  <conditions>
+                    <condition number="9" type="jump" coverage="50%" />
+                    <condition number="21" type="jump" coverage="100%" />
+                    <condition number="52" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="12" hits="21" branch="True" condition-coverage="50% (2/4)">
+                  <conditions>
+                    <condition number="74" type="jump" coverage="50%" />
+                    <condition number="95" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="13" hits="0" branch="False" />
+                <line number="14" hits="0" branch="False" />
+                <line number="17" hits="21" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="115" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="18" hits="18" branch="False" />
+                <line number="19" hits="18" branch="False" />
+                <line number="22" hits="3" branch="False" />
+                <line number="23" hits="11" branch="False" />
+                <line number="24" hits="11" branch="False" />
+                <line number="25" hits="77" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="38" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="26" hits="22" branch="False" />
+                <line number="27" hits="22" branch="False" />
+                <line number="28" hits="22" branch="False" />
+                <line number="29" hits="3" branch="False" />
+                <line number="30" hits="11" branch="False" />
+                <line number="31" hits="14" branch="False" />
+                <line number="32" hits="21" branch="False" />
+              </lines>
+            </method>
+            <method name="combineSubReducers" signature="(System.Collections.Generic.IList`1&lt;Redux.Basic.SubReducer`1&lt;T&gt;&gt;)" line-rate="0.9047" branch-rate="0.75" complexity="16">
+              <lines>
+                <line number="36" hits="2" branch="False" />
+                <line number="37" hits="5" branch="True" condition-coverage="66.66% (4/6)">
+                  <conditions>
+                    <condition number="9" type="jump" coverage="50%" />
+                    <condition number="21" type="jump" coverage="100%" />
+                    <condition number="52" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="38" hits="2" branch="True" condition-coverage="50% (2/4)">
+                  <conditions>
+                    <condition number="74" type="jump" coverage="50%" />
+                    <condition number="95" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="39" hits="0" branch="False" />
+                <line number="40" hits="0" branch="False" />
+                <line number="43" hits="2" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="115" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="44" hits="1" branch="False" />
+                <line number="45" hits="1" branch="False" />
+                <line number="46" hits="5" branch="False" />
+                <line number="49" hits="1" branch="False" />
+                <line number="50" hits="3" branch="False" />
+                <line number="51" hits="3" branch="False" />
+                <line number="52" hits="3" branch="False" />
+                <line number="53" hits="21" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="65" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="54" hits="6" branch="False" />
+                <line number="55" hits="6" branch="False" />
+                <line number="56" hits="6" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="35" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="57" hits="6" branch="False" />
+                <line number="58" hits="3" branch="False" />
+                <line number="59" hits="4" branch="False" />
+                <line number="60" hits="2" branch="False" />
+              </lines>
+            </method>
+            <method name="castReducer" signature="(Redux.Basic.Reducer`1&lt;Sup&gt;)" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="64" hits="0" branch="False" />
+                <line number="65" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="20" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="66" hits="0" branch="False" />
+                <line number="67" hits="0" branch="False" />
+                <line number="68" hits="0" branch="False" />
+                <line number="69" hits="0" branch="False" />
+                <line number="70" hits="0" branch="False" />
+                <line number="71" hits="0" branch="False" />
+                <line number="72" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="10" hits="21" branch="False" />
+            <line number="11" hits="61" branch="True" condition-coverage="66.66% (4/6)">
+              <conditions>
+                <condition number="9" type="jump" coverage="50%" />
+                <condition number="21" type="jump" coverage="100%" />
+                <condition number="52" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="12" hits="21" branch="True" condition-coverage="50% (2/4)">
+              <conditions>
+                <condition number="74" type="jump" coverage="50%" />
+                <condition number="95" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="13" hits="0" branch="False" />
+            <line number="14" hits="0" branch="False" />
+            <line number="17" hits="21" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="115" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="18" hits="18" branch="False" />
+            <line number="19" hits="18" branch="False" />
+            <line number="22" hits="3" branch="False" />
+            <line number="23" hits="11" branch="False" />
+            <line number="24" hits="11" branch="False" />
+            <line number="25" hits="77" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="38" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="26" hits="22" branch="False" />
+            <line number="27" hits="22" branch="False" />
+            <line number="28" hits="22" branch="False" />
+            <line number="29" hits="3" branch="False" />
+            <line number="30" hits="11" branch="False" />
+            <line number="31" hits="14" branch="False" />
+            <line number="32" hits="21" branch="False" />
+            <line number="36" hits="2" branch="False" />
+            <line number="37" hits="5" branch="True" condition-coverage="66.66% (4/6)">
+              <conditions>
+                <condition number="9" type="jump" coverage="50%" />
+                <condition number="21" type="jump" coverage="100%" />
+                <condition number="52" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="38" hits="2" branch="True" condition-coverage="50% (2/4)">
+              <conditions>
+                <condition number="74" type="jump" coverage="50%" />
+                <condition number="95" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="39" hits="0" branch="False" />
+            <line number="40" hits="0" branch="False" />
+            <line number="43" hits="2" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="115" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="44" hits="1" branch="False" />
+            <line number="45" hits="1" branch="False" />
+            <line number="46" hits="5" branch="False" />
+            <line number="49" hits="1" branch="False" />
+            <line number="50" hits="3" branch="False" />
+            <line number="51" hits="3" branch="False" />
+            <line number="52" hits="3" branch="False" />
+            <line number="53" hits="21" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="65" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="54" hits="6" branch="False" />
+            <line number="55" hits="6" branch="False" />
+            <line number="56" hits="6" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="35" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="57" hits="6" branch="False" />
+            <line number="58" hits="3" branch="False" />
+            <line number="59" hits="4" branch="False" />
+            <line number="60" hits="2" branch="False" />
+            <line number="64" hits="0" branch="False" />
+            <line number="65" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="20" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="66" hits="0" branch="False" />
+            <line number="67" hits="0" branch="False" />
+            <line number="68" hits="0" branch="False" />
+            <line number="69" hits="0" branch="False" />
+            <line number="70" hits="0" branch="False" />
+            <line number="71" hits="0" branch="False" />
+            <line number="72" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="Redux.Creator" filename="framework\createStore.cs" line-rate="1" branch-rate="0.75" complexity="9">
+          <methods>
+            <method name="createStore" signature="(T,Redux.Basic.Reducer`1&lt;T&gt;)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="16" hits="6" branch="False" />
+                <line number="17" hits="6" branch="False" />
+                <line number="18" hits="6" branch="False" />
+                <line number="19" hits="6" branch="False" />
+              </lines>
+            </method>
+            <method name="createStore" signature="(T,Redux.Basic.Reducer`1&lt;T&gt;,Redux.Basic.StoreEnhancer`1&lt;T&gt;)" line-rate="1" branch-rate="0.75" complexity="4">
+              <lines>
+                <line number="23" hits="4" branch="False" />
+                <line number="24" hits="4" branch="True" condition-coverage="75% (3/4)">
+                  <conditions>
+                    <condition number="2" type="jump" coverage="50%" />
+                    <condition number="20" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="25" hits="4" branch="False" />
+              </lines>
+            </method>
+            <method name="createStore" signature="(T,Redux.Basic.Reducer`1&lt;T&gt;,Redux.Basic.StoreEnhancer`1&lt;T&gt;,Redux.Dependencies.Basic.Dependencies`1&lt;T&gt;)" line-rate="1" branch-rate="0.75" complexity="4">
+              <lines>
+                <line number="28" hits="2" branch="False" />
+                <line number="29" hits="2" branch="False" />
+                <line number="30" hits="2" branch="True" condition-coverage="75% (3/4)">
+                  <conditions>
+                    <condition number="34" type="jump" coverage="50%" />
+                    <condition number="52" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="31" hits="2" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="16" hits="6" branch="False" />
+            <line number="17" hits="6" branch="False" />
+            <line number="18" hits="6" branch="False" />
+            <line number="19" hits="6" branch="False" />
+            <line number="23" hits="4" branch="False" />
+            <line number="24" hits="4" branch="True" condition-coverage="75% (3/4)">
+              <conditions>
+                <condition number="2" type="jump" coverage="50%" />
+                <condition number="20" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="25" hits="4" branch="False" />
+            <line number="28" hits="2" branch="False" />
+            <line number="29" hits="2" branch="False" />
+            <line number="30" hits="2" branch="True" condition-coverage="75% (3/4)">
+              <conditions>
+                <condition number="34" type="jump" coverage="50%" />
+                <condition number="52" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="31" hits="2" branch="False" />
+          </lines>
+        </class>
+        <class name="Redux.Middlewares" filename="middlewares\exception.cs" line-rate="0.5909" branch-rate="0.6666" complexity="6">
+          <methods>
+            <method name="exceptionMiddleware" signature="(System.String)" line-rate="0.5909" branch-rate="0.6666" complexity="6">
+              <lines>
+                <line number="11" hits="6" branch="False" />
+                <line number="12" hits="6" branch="False" />
+                <line number="13" hits="12" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="7" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="14" hits="6" branch="False" />
+                <line number="15" hits="6" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="27" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="16" hits="6" branch="False" />
+                <line number="17" hits="0" branch="False" />
+                <line number="18" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="7" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="19" hits="6" branch="False" />
+                <line number="20" hits="6" branch="False" />
+                <line number="21" hits="0" branch="False" />
+                <line number="22" hits="0" branch="False" />
+                <line number="23" hits="0" branch="False" />
+                <line number="24" hits="0" branch="False" />
+                <line number="25" hits="0" branch="False" />
+                <line number="26" hits="0" branch="False" />
+                <line number="27" hits="0" branch="False" />
+                <line number="28" hits="6" branch="False" />
+                <line number="29" hits="12" branch="False" />
+                <line number="30" hits="6" branch="False" />
+                <line number="31" hits="18" branch="False" />
+                <line number="32" hits="6" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="11" hits="6" branch="False" />
+            <line number="12" hits="6" branch="False" />
+            <line number="13" hits="12" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="7" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="14" hits="6" branch="False" />
+            <line number="15" hits="6" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="27" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="16" hits="6" branch="False" />
+            <line number="17" hits="0" branch="False" />
+            <line number="18" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="7" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="19" hits="6" branch="False" />
+            <line number="20" hits="6" branch="False" />
+            <line number="21" hits="0" branch="False" />
+            <line number="22" hits="0" branch="False" />
+            <line number="23" hits="0" branch="False" />
+            <line number="24" hits="0" branch="False" />
+            <line number="25" hits="0" branch="False" />
+            <line number="26" hits="0" branch="False" />
+            <line number="27" hits="0" branch="False" />
+            <line number="28" hits="6" branch="False" />
+            <line number="29" hits="12" branch="False" />
+            <line number="30" hits="6" branch="False" />
+            <line number="31" hits="18" branch="False" />
+            <line number="32" hits="6" branch="False" />
+          </lines>
+        </class>
+        <class name="Redux.Middlewares" filename="middlewares\log.cs" line-rate="0.5832999999999999" branch-rate="0.375" complexity="8">
+          <methods>
+            <method name="logMiddleware" signature="(System.Func`2&lt;T,System.String&gt;,System.String)" line-rate="0.5832999999999999" branch-rate="0.375" complexity="8">
+              <lines>
+                <line number="11" hits="6" branch="False" />
+                <line number="12" hits="6" branch="False" />
+                <line number="13" hits="12" branch="False" />
+                <line number="14" hits="6" branch="False" />
+                <line number="15" hits="6" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="28" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="16" hits="12" branch="False" />
+                <line number="17" hits="6" branch="False" />
+                <line number="18" hits="0" branch="False" />
+                <line number="19" hits="0" branch="False" />
+                <line number="20" hits="0" branch="False" />
+                <line number="21" hits="6" branch="False" />
+                <line number="22" hits="0" branch="False" />
+                <line number="23" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="132" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="24" hits="0" branch="False" />
+                <line number="25" hits="0" branch="False" />
+                <line number="26" hits="0" branch="False" />
+                <line number="27" hits="6" branch="False" />
+                <line number="28" hits="0" branch="False" />
+                <line number="29" hits="6" branch="False" />
+                <line number="30" hits="0" branch="False" />
+                <line number="31" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="252" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="32" hits="0" branch="False" />
+                <line number="33" hits="0" branch="False" />
+                <line number="34" hits="0" branch="False" />
+                <line number="35" hits="6" branch="False" />
+                <line number="36" hits="6" branch="False" />
+                <line number="37" hits="6" branch="False" />
+                <line number="38" hits="6" branch="False" />
+                <line number="39" hits="6" branch="False" />
+                <line number="40" hits="6" branch="False" />
+                <line number="41" hits="0" branch="False" />
+                <line number="42" hits="6" branch="False" />
+                <line number="43" hits="12" branch="False" />
+                <line number="44" hits="6" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="76" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="45" hits="18" branch="False" />
+                <line number="46" hits="6" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="11" hits="6" branch="False" />
+            <line number="12" hits="6" branch="False" />
+            <line number="13" hits="12" branch="False" />
+            <line number="14" hits="6" branch="False" />
+            <line number="15" hits="6" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="28" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="16" hits="12" branch="False" />
+            <line number="17" hits="6" branch="False" />
+            <line number="18" hits="0" branch="False" />
+            <line number="19" hits="0" branch="False" />
+            <line number="20" hits="0" branch="False" />
+            <line number="21" hits="6" branch="False" />
+            <line number="22" hits="0" branch="False" />
+            <line number="23" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="132" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="24" hits="0" branch="False" />
+            <line number="25" hits="0" branch="False" />
+            <line number="26" hits="0" branch="False" />
+            <line number="27" hits="6" branch="False" />
+            <line number="28" hits="0" branch="False" />
+            <line number="29" hits="6" branch="False" />
+            <line number="30" hits="0" branch="False" />
+            <line number="31" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="252" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="32" hits="0" branch="False" />
+            <line number="33" hits="0" branch="False" />
+            <line number="34" hits="0" branch="False" />
+            <line number="35" hits="6" branch="False" />
+            <line number="36" hits="6" branch="False" />
+            <line number="37" hits="6" branch="False" />
+            <line number="38" hits="6" branch="False" />
+            <line number="39" hits="6" branch="False" />
+            <line number="40" hits="6" branch="False" />
+            <line number="41" hits="0" branch="False" />
+            <line number="42" hits="6" branch="False" />
+            <line number="43" hits="12" branch="False" />
+            <line number="44" hits="6" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="76" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="45" hits="18" branch="False" />
+            <line number="46" hits="6" branch="False" />
+          </lines>
+        </class>
+        <class name="Redux.Middlewares" filename="middlewares\performance.cs" line-rate="0.6875" branch-rate="0.8332999999999999" complexity="6">
+          <methods>
+            <method name="performanceMiddleware" signature="(System.String)" line-rate="0.6875" branch-rate="0.8332999999999999" complexity="6">
+              <lines>
+                <line number="12" hits="6" branch="False" />
+                <line number="13" hits="6" branch="False" />
+                <line number="14" hits="12" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="7" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="15" hits="6" branch="False" />
+                <line number="16" hits="6" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="28" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="17" hits="6" branch="False" />
+                <line number="18" hits="0" branch="False" />
+                <line number="19" hits="0" branch="False" />
+                <line number="20" hits="0" branch="False" />
+                <line number="21" hits="0" branch="False" />
+                <line number="22" hits="0" branch="False" />
+                <line number="23" hits="6" branch="False" />
+                <line number="24" hits="12" branch="False" />
+                <line number="25" hits="6" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="76" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="26" hits="18" branch="False" />
+                <line number="27" hits="6" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="12" hits="6" branch="False" />
+            <line number="13" hits="6" branch="False" />
+            <line number="14" hits="12" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="7" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="15" hits="6" branch="False" />
+            <line number="16" hits="6" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="28" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="17" hits="6" branch="False" />
+            <line number="18" hits="0" branch="False" />
+            <line number="19" hits="0" branch="False" />
+            <line number="20" hits="0" branch="False" />
+            <line number="21" hits="0" branch="False" />
+            <line number="22" hits="0" branch="False" />
+            <line number="23" hits="6" branch="False" />
+            <line number="24" hits="12" branch="False" />
+            <line number="25" hits="6" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="76" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="26" hits="18" branch="False" />
+            <line number="27" hits="6" branch="False" />
+          </lines>
+        </class>
+        <class name="Redux.Utils.ObjectCopier" filename="utils\clone.cs" line-rate="0.5384" branch-rate="0.5" complexity="6">
+          <methods>
+            <method name="Clone" signature="(T)" line-rate="0.5384" branch-rate="0.5" complexity="6">
+              <lines>
+                <line number="13" hits="19" branch="False" />
+                <line number="14" hits="19" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="21" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="15" hits="0" branch="False" />
+                <line number="16" hits="0" branch="False" />
+                <line number="20" hits="19" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="51" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="21" hits="0" branch="False" />
+                <line number="22" hits="0" branch="False" />
+                <line number="25" hits="19" branch="False" />
+                <line number="27" hits="19" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="85" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="28" hits="0" branch="False" />
+                <line number="29" hits="0" branch="False" />
+                <line number="32" hits="19" branch="False" />
+                <line number="33" hits="19" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="13" hits="19" branch="False" />
+            <line number="14" hits="19" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="21" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="15" hits="0" branch="False" />
+            <line number="16" hits="0" branch="False" />
+            <line number="20" hits="19" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="51" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="21" hits="0" branch="False" />
+            <line number="22" hits="0" branch="False" />
+            <line number="25" hits="19" branch="False" />
+            <line number="27" hits="19" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="85" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="28" hits="0" branch="False" />
+            <line number="29" hits="0" branch="False" />
+            <line number="32" hits="19" branch="False" />
+            <line number="33" hits="19" branch="False" />
+          </lines>
+        </class>
+        <class name="Redux.Utils.Helper" filename="utils\helper.cs" line-rate="0" branch-rate="0" complexity="8">
+          <methods>
+            <method name="GetPropertyValue" signature="(T,System.String)" line-rate="0" branch-rate="0" complexity="4">
+              <lines>
+                <line number="13" hits="0" branch="False" />
+                <line number="14" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="12" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="15" hits="0" branch="False" />
+                <line number="16" hits="0" branch="False" />
+                <line number="19" hits="0" branch="False" />
+                <line number="20" hits="0" branch="False" />
+                <line number="21" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="46" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="22" hits="0" branch="False" />
+                <line number="24" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="SetPropertyValue" signature="(T,System.String,System.Object)" line-rate="0" branch-rate="0" complexity="4">
+              <lines>
+                <line number="34" hits="0" branch="False" />
+                <line number="35" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="12" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="36" hits="0" branch="False" />
+                <line number="37" hits="0" branch="False" />
+                <line number="40" hits="0" branch="False" />
+                <line number="41" hits="0" branch="False" />
+                <line number="42" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="46" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="43" hits="0" branch="False" />
+                <line number="44" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="13" hits="0" branch="False" />
+            <line number="14" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="12" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="15" hits="0" branch="False" />
+            <line number="16" hits="0" branch="False" />
+            <line number="19" hits="0" branch="False" />
+            <line number="20" hits="0" branch="False" />
+            <line number="21" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="46" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="22" hits="0" branch="False" />
+            <line number="24" hits="0" branch="False" />
+            <line number="34" hits="0" branch="False" />
+            <line number="35" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="12" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="36" hits="0" branch="False" />
+            <line number="37" hits="0" branch="False" />
+            <line number="40" hits="0" branch="False" />
+            <line number="41" hits="0" branch="False" />
+            <line number="42" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="46" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="43" hits="0" branch="False" />
+            <line number="44" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="Redux.Maui.ListAdapter" filename="maui\listAdapter.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name=".ctor" signature="(System.Int32,Redux.Maui.IndexedWidgetBuilder)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="0" branch="False" />
+                <line number="11" hits="0" branch="False" />
+                <line number="12" hits="0" branch="False" />
+                <line number="13" hits="0" branch="False" />
+                <line number="14" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="10" hits="0" branch="False" />
+            <line number="11" hits="0" branch="False" />
+            <line number="12" hits="0" branch="False" />
+            <line number="13" hits="0" branch="False" />
+            <line number="14" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="Redux.Framework.ActionCreator" filename="framework\bindActionCreators.cs" line-rate="0.3478" branch-rate="1" complexity="8">
+          <methods>
+            <method name="bind" signature="(System.Func`2&lt;T1,Redux.Basic.Action&gt;,Redux.Basic.Dispatch)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="2" branch="False" />
+              </lines>
+            </method>
+            <method name="bind" signature="(System.Func`3&lt;T1,T2,Redux.Basic.Action&gt;,Redux.Basic.Dispatch)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="bind" signature="(System.Func`4&lt;T1,T2,T3,Redux.Basic.Action&gt;,Redux.Basic.Dispatch)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="bindAction" signature="(System.Func`2&lt;T1,Redux.Basic.Action&gt;,Redux.Basic.Dispatch)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="12" hits="1" branch="False" />
+                <line number="13" hits="1" branch="False" />
+                <line number="14" hits="1" branch="False" />
+                <line number="15" hits="1" branch="False" />
+                <line number="16" hits="1" branch="False" />
+                <line number="17" hits="2" branch="False" />
+              </lines>
+            </method>
+            <method name="bindAction" signature="(System.Func`3&lt;T1,T2,Redux.Basic.Action&gt;,Redux.Basic.Dispatch)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="19" hits="0" branch="False" />
+                <line number="20" hits="0" branch="False" />
+                <line number="21" hits="0" branch="False" />
+                <line number="22" hits="0" branch="False" />
+                <line number="23" hits="0" branch="False" />
+                <line number="24" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="bindAction" signature="(System.Func`4&lt;T1,T2,T3,Redux.Basic.Action&gt;,Redux.Basic.Dispatch)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="26" hits="0" branch="False" />
+                <line number="27" hits="0" branch="False" />
+                <line number="28" hits="0" branch="False" />
+                <line number="29" hits="0" branch="False" />
+                <line number="30" hits="0" branch="False" />
+                <line number="31" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="bindAction" signature="(Redux.Basic.Action,Redux.Basic.Dispatch)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="33" hits="2" branch="False" />
+              </lines>
+            </method>
+            <method name="Dispatch" signature="(Redux.Basic.Action,Redux.Basic.Dispatch)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="35" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="8" hits="2" branch="False" />
+            <line number="9" hits="0" branch="False" />
+            <line number="10" hits="0" branch="False" />
+            <line number="12" hits="1" branch="False" />
+            <line number="13" hits="1" branch="False" />
+            <line number="14" hits="1" branch="False" />
+            <line number="15" hits="1" branch="False" />
+            <line number="16" hits="1" branch="False" />
+            <line number="17" hits="2" branch="False" />
+            <line number="19" hits="0" branch="False" />
+            <line number="20" hits="0" branch="False" />
+            <line number="21" hits="0" branch="False" />
+            <line number="22" hits="0" branch="False" />
+            <line number="23" hits="0" branch="False" />
+            <line number="24" hits="0" branch="False" />
+            <line number="26" hits="0" branch="False" />
+            <line number="27" hits="0" branch="False" />
+            <line number="28" hits="0" branch="False" />
+            <line number="29" hits="0" branch="False" />
+            <line number="30" hits="0" branch="False" />
+            <line number="31" hits="0" branch="False" />
+            <line number="33" hits="2" branch="False" />
+            <line number="35" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="Redux.Basic.Action" filename="framework\basic.cs" line-rate="0.5" branch-rate="0" complexity="9">
+          <methods>
+            <method name="get_Type" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="21" hits="186" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Payload" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="22" hits="63" branch="False" />
+              </lines>
+            </method>
+            <method name="Equals" signature="(System.Object)" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="24" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="1" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+              </lines>
+            </method>
+            <method name="Equals" signature="(Redux.Basic.Action)" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="26" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="1" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+              </lines>
+            </method>
+            <method name="GetHashCode" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="28" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.Object,System.Object)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="15" branch="False" />
+                <line number="11" hits="15" branch="False" />
+                <line number="12" hits="15" branch="False" />
+                <line number="13" hits="15" branch="False" />
+                <line number="14" hits="15" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.Object)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="16" hits="0" branch="False" />
+                <line number="17" hits="0" branch="False" />
+                <line number="18" hits="0" branch="False" />
+                <line number="19" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="21" hits="186" branch="False" />
+            <line number="22" hits="63" branch="False" />
+            <line number="24" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="1" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="26" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="1" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="28" hits="0" branch="False" />
+            <line number="10" hits="15" branch="False" />
+            <line number="11" hits="15" branch="False" />
+            <line number="12" hits="15" branch="False" />
+            <line number="13" hits="15" branch="False" />
+            <line number="14" hits="15" branch="False" />
+            <line number="16" hits="0" branch="False" />
+            <line number="17" hits="0" branch="False" />
+            <line number="18" hits="0" branch="False" />
+            <line number="19" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="Redux.Basic.Unsubscribe" filename="framework\basic.cs" line-rate="1" branch-rate="1" complexity="2">
+          <methods>
+            <method name="get_Cancel" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="47" hits="7" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.Func`1&lt;System.Boolean&gt;)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="49" hits="6" branch="False" />
+                <line number="50" hits="6" branch="False" />
+                <line number="51" hits="6" branch="False" />
+                <line number="52" hits="6" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="47" hits="7" branch="False" />
+            <line number="49" hits="6" branch="False" />
+            <line number="50" hits="6" branch="False" />
+            <line number="51" hits="6" branch="False" />
+            <line number="52" hits="6" branch="False" />
+          </lines>
+        </class>
+        <class name="Redux.Basic.Store`1" filename="framework\basic.cs" line-rate="1" branch-rate="1" complexity="8">
+          <methods>
+            <method name="get_GetState" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="78" hits="82" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Dispatch" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="79" hits="39" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Subscribe" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="81" hits="12" branch="False" />
+              </lines>
+            </method>
+            <method name="get_ReplaceReducer" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="83" hits="6" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(T,Redux.Basic.Reducer`1&lt;T&gt;)" line-rate="1" branch-rate="1" complexity="4">
+              <lines>
+                <line number="86" hits="6" branch="False" />
+                <line number="87" hits="6" branch="False" />
+                <line number="88" hits="6" branch="False" />
+                <line number="89" hits="6" branch="False" />
+                <line number="90" hits="6" branch="False" />
+                <line number="92" hits="6" branch="False" />
+                <line number="93" hits="15" branch="False" />
+                <line number="94" hits="15" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="17" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="95" hits="15" branch="False" />
+                <line number="96" hits="15" branch="False" />
+                <line number="97" hits="6" branch="False" />
+                <line number="98" hits="71" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="96" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="99" hits="13" branch="False" />
+                <line number="100" hits="13" branch="False" />
+                <line number="101" hits="28" branch="False" />
+                <line number="102" hits="15" branch="False" />
+                <line number="103" hits="21" branch="False" />
+                <line number="105" hits="6" branch="False" />
+                <line number="106" hits="6" branch="False" />
+                <line number="107" hits="6" branch="False" />
+                <line number="108" hits="7" branch="False" />
+                <line number="109" hits="12" branch="False" />
+                <line number="111" hits="6" branch="False" />
+                <line number="112" hits="6" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="78" hits="82" branch="False" />
+            <line number="79" hits="39" branch="False" />
+            <line number="81" hits="12" branch="False" />
+            <line number="83" hits="6" branch="False" />
+            <line number="86" hits="6" branch="False" />
+            <line number="87" hits="6" branch="False" />
+            <line number="88" hits="6" branch="False" />
+            <line number="89" hits="6" branch="False" />
+            <line number="90" hits="6" branch="False" />
+            <line number="92" hits="6" branch="False" />
+            <line number="93" hits="15" branch="False" />
+            <line number="94" hits="15" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="17" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="95" hits="15" branch="False" />
+            <line number="96" hits="15" branch="False" />
+            <line number="97" hits="6" branch="False" />
+            <line number="98" hits="71" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="96" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="99" hits="13" branch="False" />
+            <line number="100" hits="13" branch="False" />
+            <line number="101" hits="28" branch="False" />
+            <line number="102" hits="15" branch="False" />
+            <line number="103" hits="21" branch="False" />
+            <line number="105" hits="6" branch="False" />
+            <line number="106" hits="6" branch="False" />
+            <line number="107" hits="6" branch="False" />
+            <line number="108" hits="7" branch="False" />
+            <line number="109" hits="12" branch="False" />
+            <line number="111" hits="6" branch="False" />
+            <line number="112" hits="6" branch="False" />
+          </lines>
+        </class>
+        <class name="Redux.Effect.Context`1" filename="effect\basic.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="get_state" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="16" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="16" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="Redux.Effect.StoreContext`1" filename="effect\basic.cs" line-rate="0" branch-rate="1" complexity="3">
+          <methods>
+            <method name="get_state" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="33" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="Dispatch" signature="(Redux.Basic.Action)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="36" hits="0" branch="False" />
+                <line number="37" hits="0" branch="False" />
+                <line number="38" hits="0" branch="False" />
+                <line number="39" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(Redux.Basic.Store`1&lt;T&gt;)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="28" hits="0" branch="False" />
+                <line number="29" hits="0" branch="False" />
+                <line number="30" hits="0" branch="False" />
+                <line number="31" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="33" hits="0" branch="False" />
+            <line number="36" hits="0" branch="False" />
+            <line number="37" hits="0" branch="False" />
+            <line number="38" hits="0" branch="False" />
+            <line number="39" hits="0" branch="False" />
+            <line number="28" hits="0" branch="False" />
+            <line number="29" hits="0" branch="False" />
+            <line number="30" hits="0" branch="False" />
+            <line number="31" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="Redux.Dependencies.Creator" filename="dependencies\creator.cs" line-rate="1" branch-rate="0.5" complexity="2">
+          <methods>
+            <method name="createDependent" signature="(Redux.Basic.AbstractConnector`2&lt;K,T&gt;,Redux.Dependencies.AbstractLogic`1&lt;T&gt;)" line-rate="1" branch-rate="0.5" complexity="2">
+              <lines>
+                <line number="15" hits="17" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="1" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="15" hits="17" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="1" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+          </lines>
+        </class>
+        <class name="Redux.Dependencies._Dependent`2" filename="dependencies\dependent.cs" line-rate="0.875" branch-rate="0.5" complexity="4">
+          <methods>
+            <method name="createSubReducer" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="20" hits="17" branch="False" />
+              </lines>
+            </method>
+            <method name="subGetter" signature="(Redux.Basic.Get`1&lt;T&gt;)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="22" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(Redux.Dependencies.AbstractLogic`1&lt;P&gt;,Redux.Basic.AbstractConnector`2&lt;T,P&gt;)" line-rate="1" branch-rate="0.5" complexity="2">
+              <lines>
+                <line number="13" hits="17" branch="False" />
+                <line number="14" hits="17" branch="False" />
+                <line number="15" hits="17" branch="False" />
+                <line number="16" hits="17" branch="False" />
+                <line number="17" hits="17" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="36" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="18" hits="17" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="20" hits="17" branch="False" />
+            <line number="22" hits="0" branch="False" />
+            <line number="13" hits="17" branch="False" />
+            <line number="14" hits="17" branch="False" />
+            <line number="15" hits="17" branch="False" />
+            <line number="16" hits="17" branch="False" />
+            <line number="17" hits="17" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="36" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="18" hits="17" branch="False" />
+          </lines>
+        </class>
+        <class name="Redux.Dependencies.Logic`1" filename="dependencies\logic.cs" line-rate="1" branch-rate="0.5" complexity="7">
+          <methods>
+            <method name="get_protectedReducer" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="33" hits="17" branch="False" />
+              </lines>
+            </method>
+            <method name="get_protectedDependencies" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="35" hits="16" branch="False" />
+              </lines>
+            </method>
+            <method name="get_protectedDependenciesReducer" signature="()" line-rate="1" branch-rate="0.5" complexity="2">
+              <lines>
+                <line number="37" hits="16" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="7" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+              </lines>
+            </method>
+            <method name="createReducer" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="39" hits="17" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(Redux.Basic.Reducer`1&lt;T&gt;,Redux.Dependencies.Basic.Dependencies`1&lt;T&gt;)" line-rate="1" branch-rate="0.5" complexity="2">
+              <lines>
+                <line number="27" hits="17" branch="False" />
+                <line number="28" hits="17" branch="False" />
+                <line number="29" hits="17" branch="False" />
+                <line number="30" hits="17" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="17" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="31" hits="17" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="33" hits="17" branch="False" />
+            <line number="35" hits="16" branch="False" />
+            <line number="37" hits="16" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="7" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="39" hits="17" branch="False" />
+            <line number="27" hits="17" branch="False" />
+            <line number="28" hits="17" branch="False" />
+            <line number="29" hits="17" branch="False" />
+            <line number="30" hits="17" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="17" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="31" hits="17" branch="False" />
+          </lines>
+        </class>
+        <class name="Redux.Dependencies.Basic.Dependencies`1" filename="dependencies\basic.cs" line-rate="0.75" branch-rate="0.5714" complexity="18">
+          <methods>
+            <method name="createReducer" signature="()" line-rate="1" branch-rate="1" complexity="8">
+              <lines>
+                <line number="46" hits="2" branch="False" />
+                <line number="47" hits="2" branch="False" />
+                <line number="48" hits="2" branch="True" condition-coverage="100% (4/4)">
+                  <conditions>
+                    <condition number="13" type="jump" coverage="100%" />
+                    <condition number="31" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="49" hits="1" branch="False" />
+                <line number="50" hits="3" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="52" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="51" hits="1" branch="False" />
+                <line number="53" hits="2" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="105" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="54" hits="1" branch="False" />
+                <line number="55" hits="1" branch="False" />
+                <line number="56" hits="1" branch="False" />
+                <line number="58" hits="2" branch="False" />
+                <line number="59" hits="2" branch="False" />
+                <line number="60" hits="2" branch="False" />
+              </lines>
+            </method>
+            <method name="slot" signature="(System.String)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="62" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="trim" signature="()" line-rate="0" branch-rate="0" complexity="6">
+              <lines>
+                <line number="64" hits="0" branch="True" condition-coverage="0% (0/6)">
+                  <conditions>
+                    <condition number="6" type="jump" coverage="0%" />
+                    <condition number="15" type="jump" coverage="0%" />
+                    <condition number="26" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.Collections.Generic.IDictionary`2&lt;System.String,Redux.Dependencies.Basic.Dependent`1&lt;T&gt;&gt;,Redux.Dependencies.Basic.Dependent`1&lt;T&gt;)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="30" hits="0" branch="False" />
+                <line number="31" hits="0" branch="False" />
+                <line number="32" hits="0" branch="False" />
+                <line number="33" hits="0" branch="False" />
+                <line number="34" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.Collections.Generic.IDictionary`2&lt;System.String,Redux.Dependencies.Basic.Dependent`1&lt;T&gt;&gt;)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="36" hits="1" branch="False" />
+                <line number="37" hits="1" branch="False" />
+                <line number="38" hits="1" branch="False" />
+                <line number="39" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(Redux.Dependencies.Basic.Dependent`1&lt;T&gt;)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="40" hits="1" branch="False" />
+                <line number="41" hits="1" branch="False" />
+                <line number="42" hits="1" branch="False" />
+                <line number="43" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="46" hits="2" branch="False" />
+            <line number="47" hits="2" branch="False" />
+            <line number="48" hits="2" branch="True" condition-coverage="100% (4/4)">
+              <conditions>
+                <condition number="13" type="jump" coverage="100%" />
+                <condition number="31" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="49" hits="1" branch="False" />
+            <line number="50" hits="3" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="52" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="51" hits="1" branch="False" />
+            <line number="53" hits="2" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="105" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="54" hits="1" branch="False" />
+            <line number="55" hits="1" branch="False" />
+            <line number="56" hits="1" branch="False" />
+            <line number="58" hits="2" branch="False" />
+            <line number="59" hits="2" branch="False" />
+            <line number="60" hits="2" branch="False" />
+            <line number="62" hits="0" branch="False" />
+            <line number="64" hits="0" branch="True" condition-coverage="0% (0/6)">
+              <conditions>
+                <condition number="6" type="jump" coverage="0%" />
+                <condition number="15" type="jump" coverage="0%" />
+                <condition number="26" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="30" hits="0" branch="False" />
+            <line number="31" hits="0" branch="False" />
+            <line number="32" hits="0" branch="False" />
+            <line number="33" hits="0" branch="False" />
+            <line number="34" hits="0" branch="False" />
+            <line number="36" hits="1" branch="False" />
+            <line number="37" hits="1" branch="False" />
+            <line number="38" hits="1" branch="False" />
+            <line number="39" hits="1" branch="False" />
+            <line number="40" hits="1" branch="False" />
+            <line number="41" hits="1" branch="False" />
+            <line number="42" hits="1" branch="False" />
+            <line number="43" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="Redux.Dependencies.Basic.DependentArray`1" filename="dependencies\basic.cs" line-rate="1" branch-rate="1" complexity="2">
+          <methods>
+            <method name="Get" signature="(System.Int32)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="80" hits="14" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(Redux.Dependencies.Basic.IndexedDependentBuilder`1&lt;T&gt;,System.Int32)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="74" hits="4" branch="False" />
+                <line number="75" hits="4" branch="False" />
+                <line number="76" hits="4" branch="False" />
+                <line number="77" hits="4" branch="False" />
+                <line number="78" hits="4" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="80" hits="14" branch="False" />
+            <line number="74" hits="4" branch="False" />
+            <line number="75" hits="4" branch="False" />
+            <line number="76" hits="4" branch="False" />
+            <line number="77" hits="4" branch="False" />
+            <line number="78" hits="4" branch="False" />
+          </lines>
+        </class>
+        <class name="Redux.Dependencies.Basic.FlowDependencies`1" filename="dependencies\basic.cs" line-rate="1" branch-rate="0.8" complexity="12">
+          <methods>
+            <method name="createReducer" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="92" hits="1" branch="False" />
+                <line number="93" hits="4" branch="False" />
+                <line number="94" hits="4" branch="False" />
+                <line number="95" hits="4" branch="False" />
+                <line number="96" hits="4" branch="False" />
+                <line number="97" hits="4" branch="False" />
+                <line number="98" hits="4" branch="False" />
+                <line number="99" hits="36" branch="False" />
+                <line number="100" hits="14" branch="False" />
+                <line number="101" hits="14" branch="False" />
+                <line number="102" hits="14" branch="False" />
+                <line number="103" hits="14" branch="False" />
+                <line number="104" hits="14" branch="False" />
+                <line number="105" hits="14" branch="False" />
+                <line number="106" hits="14" branch="False" />
+                <line number="107" hits="14" branch="False" />
+                <line number="108" hits="14" branch="False" />
+                <line number="109" hits="4" branch="False" />
+                <line number="110" hits="4" branch="False" />
+                <line number="111" hits="5" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(Redux.Adapter.FlowAdapterView`1&lt;T&gt;)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="87" hits="1" branch="False" />
+                <line number="88" hits="1" branch="False" />
+                <line number="89" hits="1" branch="False" />
+                <line number="90" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="92" hits="1" branch="False" />
+            <line number="93" hits="4" branch="False" />
+            <line number="94" hits="4" branch="False" />
+            <line number="95" hits="4" branch="False" />
+            <line number="96" hits="4" branch="False" />
+            <line number="97" hits="4" branch="False" />
+            <line number="98" hits="4" branch="False" />
+            <line number="99" hits="36" branch="False" />
+            <line number="100" hits="14" branch="False" />
+            <line number="101" hits="14" branch="False" />
+            <line number="102" hits="14" branch="False" />
+            <line number="103" hits="14" branch="False" />
+            <line number="104" hits="14" branch="False" />
+            <line number="105" hits="14" branch="False" />
+            <line number="106" hits="14" branch="False" />
+            <line number="107" hits="14" branch="False" />
+            <line number="108" hits="14" branch="False" />
+            <line number="109" hits="4" branch="False" />
+            <line number="110" hits="4" branch="False" />
+            <line number="111" hits="5" branch="False" />
+            <line number="87" hits="1" branch="False" />
+            <line number="88" hits="1" branch="False" />
+            <line number="89" hits="1" branch="False" />
+            <line number="90" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="Redux.Connector.MutableConn`2" filename="connector\basic.cs" line-rate="0.7352" branch-rate="0.65" complexity="21">
+          <methods>
+            <method name="subReducer" signature="(Redux.Basic.Reducer`1&lt;P&gt;)" line-rate="0.826" branch-rate="0.8" complexity="10">
+              <lines>
+                <line number="15" hits="16" branch="False" />
+                <line number="16" hits="16" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="32" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="17" hits="0" branch="False" />
+                <line number="18" hits="0" branch="False" />
+                <line number="21" hits="16" branch="False" />
+                <line number="22" hits="16" branch="False" />
+                <line number="23" hits="20" branch="False" />
+                <line number="24" hits="20" branch="False" />
+                <line number="25" hits="20" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="27" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="26" hits="0" branch="False" />
+                <line number="27" hits="0" branch="False" />
+                <line number="28" hits="16" branch="False" />
+                <line number="29" hits="20" branch="False" />
+                <line number="30" hits="20" branch="False" />
+                <line number="31" hits="20" branch="True" condition-coverage="100% (4/4)">
+                  <conditions>
+                    <condition number="66" type="jump" coverage="100%" />
+                    <condition number="69" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="32" hits="20" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="92" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="33" hits="4" branch="False" />
+                <line number="34" hits="4" branch="False" />
+                <line number="35" hits="4" branch="False" />
+                <line number="36" hits="16" branch="False" />
+                <line number="37" hits="20" branch="False" />
+                <line number="38" hits="36" branch="False" />
+                <line number="40" hits="16" branch="False" />
+              </lines>
+            </method>
+            <method name="_clone" signature="(T)" line-rate="0.5" branch-rate="0.5" complexity="10">
+              <lines>
+                <line number="44" hits="4" branch="False" />
+                <line number="45" hits="4" branch="True" condition-coverage="62.5% (5/8)">
+                  <conditions>
+                    <condition number="12" type="jump" coverage="100%" />
+                    <condition number="20" type="jump" coverage="50%" />
+                    <condition number="33" type="jump" coverage="50%" />
+                    <condition number="54" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="46" hits="4" branch="False" />
+                <line number="47" hits="4" branch="False" />
+                <line number="49" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="77" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="50" hits="0" branch="False" />
+                <line number="51" hits="0" branch="False" />
+                <line number="54" hits="0" branch="False" />
+                <line number="55" hits="0" branch="False" />
+                <line number="57" hits="4" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="48" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="15" hits="16" branch="False" />
+            <line number="16" hits="16" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="32" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="17" hits="0" branch="False" />
+            <line number="18" hits="0" branch="False" />
+            <line number="21" hits="16" branch="False" />
+            <line number="22" hits="16" branch="False" />
+            <line number="23" hits="20" branch="False" />
+            <line number="24" hits="20" branch="False" />
+            <line number="25" hits="20" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="27" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="26" hits="0" branch="False" />
+            <line number="27" hits="0" branch="False" />
+            <line number="28" hits="16" branch="False" />
+            <line number="29" hits="20" branch="False" />
+            <line number="30" hits="20" branch="False" />
+            <line number="31" hits="20" branch="True" condition-coverage="100% (4/4)">
+              <conditions>
+                <condition number="66" type="jump" coverage="100%" />
+                <condition number="69" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="32" hits="20" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="92" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="33" hits="4" branch="False" />
+            <line number="34" hits="4" branch="False" />
+            <line number="35" hits="4" branch="False" />
+            <line number="36" hits="16" branch="False" />
+            <line number="37" hits="20" branch="False" />
+            <line number="38" hits="36" branch="False" />
+            <line number="40" hits="16" branch="False" />
+            <line number="44" hits="4" branch="False" />
+            <line number="45" hits="4" branch="True" condition-coverage="62.5% (5/8)">
+              <conditions>
+                <condition number="12" type="jump" coverage="100%" />
+                <condition number="20" type="jump" coverage="50%" />
+                <condition number="33" type="jump" coverage="50%" />
+                <condition number="54" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="46" hits="4" branch="False" />
+            <line number="47" hits="4" branch="False" />
+            <line number="49" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="77" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="50" hits="0" branch="False" />
+            <line number="51" hits="0" branch="False" />
+            <line number="54" hits="0" branch="False" />
+            <line number="55" hits="0" branch="False" />
+            <line number="57" hits="4" branch="False" />
+            <line number="10" hits="48" branch="False" />
+          </lines>
+        </class>
+        <class name="Redux.Connector.ConnOp`2" filename="connector\basic.cs" line-rate="0.22219999999999998" branch-rate="1" complexity="5">
+          <methods>
+            <method name="Get" signature="(T)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="73" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="Set" signature="(T,P)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="75" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="add" signature="(Redux.Dependencies.AbstractLogic`1&lt;P&gt;)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="78" hits="16" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.Func`2&lt;T,P&gt;,System.Action`2&lt;T,P&gt;)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="65" hits="0" branch="False" />
+                <line number="66" hits="0" branch="False" />
+                <line number="67" hits="0" branch="False" />
+                <line number="68" hits="0" branch="False" />
+                <line number="69" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="71" hits="48" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="73" hits="0" branch="False" />
+            <line number="75" hits="0" branch="False" />
+            <line number="78" hits="16" branch="False" />
+            <line number="65" hits="0" branch="False" />
+            <line number="66" hits="0" branch="False" />
+            <line number="67" hits="0" branch="False" />
+            <line number="68" hits="0" branch="False" />
+            <line number="69" hits="0" branch="False" />
+            <line number="71" hits="48" branch="False" />
+          </lines>
+        </class>
+        <class name="Redux.Connector.ImmutableConn`2" filename="connector\basic.cs" line-rate="0.9166" branch-rate="0.6666" complexity="8">
+          <methods>
+            <method name="subReducer" signature="(Redux.Basic.Reducer`1&lt;P&gt;)" line-rate="0.909" branch-rate="0.6666" complexity="6">
+              <lines>
+                <line number="88" hits="1" branch="False" />
+                <line number="89" hits="1" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="27" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="90" hits="1" branch="False" />
+                <line number="91" hits="1" branch="False" />
+                <line number="92" hits="4" branch="False" />
+                <line number="93" hits="4" branch="False" />
+                <line number="94" hits="4" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="25" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="95" hits="0" branch="False" />
+                <line number="96" hits="0" branch="False" />
+                <line number="97" hits="1" branch="False" />
+                <line number="98" hits="1" branch="False" />
+                <line number="99" hits="4" branch="False" />
+                <line number="100" hits="4" branch="False" />
+                <line number="101" hits="4" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="68" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="102" hits="3" branch="False" />
+                <line number="103" hits="3" branch="False" />
+                <line number="104" hits="3" branch="False" />
+                <line number="105" hits="1" branch="False" />
+                <line number="106" hits="1" branch="False" />
+                <line number="107" hits="1" branch="False" />
+                <line number="108" hits="5" branch="False" />
+                <line number="109" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name="add" signature="(Redux.Dependencies.AbstractLogic`1&lt;P&gt;)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="112" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="83" hits="3" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="88" hits="1" branch="False" />
+            <line number="89" hits="1" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="27" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="90" hits="1" branch="False" />
+            <line number="91" hits="1" branch="False" />
+            <line number="92" hits="4" branch="False" />
+            <line number="93" hits="4" branch="False" />
+            <line number="94" hits="4" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="25" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="95" hits="0" branch="False" />
+            <line number="96" hits="0" branch="False" />
+            <line number="97" hits="1" branch="False" />
+            <line number="98" hits="1" branch="False" />
+            <line number="99" hits="4" branch="False" />
+            <line number="100" hits="4" branch="False" />
+            <line number="101" hits="4" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="68" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="102" hits="3" branch="False" />
+            <line number="103" hits="3" branch="False" />
+            <line number="104" hits="3" branch="False" />
+            <line number="105" hits="1" branch="False" />
+            <line number="106" hits="1" branch="False" />
+            <line number="107" hits="1" branch="False" />
+            <line number="108" hits="5" branch="False" />
+            <line number="109" hits="1" branch="False" />
+            <line number="112" hits="1" branch="False" />
+            <line number="83" hits="3" branch="False" />
+          </lines>
+        </class>
+        <class name="Redux.Connector.NoneConn`1" filename="connector\basic.cs" line-rate="1" branch-rate="1" complexity="3">
+          <methods>
+            <method name="Get" signature="(T)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="119" hits="4" branch="False" />
+              </lines>
+            </method>
+            <method name="Set" signature="(T,T)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="121" hits="3" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="117" hits="3" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="119" hits="4" branch="False" />
+            <line number="121" hits="3" branch="False" />
+            <line number="117" hits="3" branch="False" />
+          </lines>
+        </class>
+        <class name="Redux.Component.Component`1" filename="component\basic.cs" line-rate="0.5" branch-rate="1" complexity="2">
+          <methods>
+            <method name=".ctor" signature="(Redux.Basic.Reducer`1&lt;T&gt;,Redux.Dependencies.Basic.Dependencies`1&lt;T&gt;)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="14" hits="0" branch="False" />
+                <line number="15" hits="0" branch="False" />
+                <line number="16" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(Redux.Basic.Reducer`1&lt;T&gt;)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="18" hits="16" branch="False" />
+                <line number="19" hits="16" branch="False" />
+                <line number="20" hits="16" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="14" hits="0" branch="False" />
+            <line number="15" hits="0" branch="False" />
+            <line number="16" hits="0" branch="False" />
+            <line number="18" hits="16" branch="False" />
+            <line number="19" hits="16" branch="False" />
+            <line number="20" hits="16" branch="False" />
+          </lines>
+        </class>
+        <class name="Redux.Adapter.FlowAdapter`1" filename="adapter\basic.cs" line-rate="1" branch-rate="1" complexity="2">
+          <methods>
+            <method name="get_protectedDependenciesReducer" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="25" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(Redux.Basic.Reducer`1&lt;T&gt;,Redux.Adapter.FlowAdapterView`1&lt;T&gt;)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="20" hits="1" branch="False" />
+                <line number="21" hits="1" branch="False" />
+                <line number="22" hits="1" branch="False" />
+                <line number="23" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="25" hits="1" branch="False" />
+            <line number="20" hits="1" branch="False" />
+            <line number="21" hits="1" branch="False" />
+            <line number="22" hits="1" branch="False" />
+            <line number="23" hits="1" branch="False" />
+          </lines>
+        </class>
+      </classes>
+    </package>
+  </packages>
+</coverage>

@@ -20,6 +20,16 @@ jobs:
     - name: build
       run: dotnet build
     - name: test
-      run: dotnet test
-    - name: Upload coverage to Codecov
+      run: dotnet test --no-build --verbosity normal --collect:"XPlat Code Coverage"
+    - name: Upload coverage to Codecov #https://github.com/codecov/codecov-action
       uses: codecov/codecov-action@v3
+      # with:
+      #   files: ./coverage1.xml,./coverage2.xml
+      #   flags: unittests
+      #   fail_ci_if_error: true
+      #   verbose: true
+      # run: |
+      #   $ProgressPreference = 'SilentlyContinue'
+      #   Invoke-WebRequest -Uri https://uploader.codecov.io/latest/windows/codecov.exe 
+      #   -Outfile codecov.exe
+      #   .\codecov.exe
