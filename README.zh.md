@@ -31,14 +31,16 @@ Done Redux 是基于Redux思想的组合式状态管理框架，非常适合构�
 -   初始化状态，Reducer，容器；
 -   监听订阅，发起指令
 
-```c#
+````c#
 var state = CounterState.initState();
-var store = Creator.createStore<CounterState>(state, CounterReducer.buildReducer());
+var reduer = CounterReducer.buildReducer();
+var store = Creator.createStore<CounterState>(state, reducer);
 
 store.Subscribe(() =>
 {
     CounterState lastState = store.GetState();
-    Console.WriteLine($"[Subscribe] last-state:{JsonSerializer.Serialize(lastState)}");
+    var output = JsonSerializer.Serialize(lastState);
+    Console.WriteLine($"[Subscribe] last-state:{output}");
 });
 
 store.Dispatch(CounterActionCreator.add(1));
@@ -99,8 +101,8 @@ internal class CounterState
         return state;
     }
 }
-​```
 ```
+````
 
 
 
