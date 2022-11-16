@@ -22,7 +22,7 @@ Done Redux 是基于Redux思想的组合式状态管理框架，非常适合构�
 
 ## 文档
 
-语言: [英文](README.md) | [中文简体](doc/README.zh.md)
+语言: [英文](README.md) | [中文](README.zh.md)
 
 
 

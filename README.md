@@ -6,8 +6,8 @@
 
 ## What is Done Redux?
 
-Done Redux is an assembled state management framework based on Redux and .Net7
-It is suitable for building any applications.
+Done Redux is a combined state management framework based on Redux and .Net7, namely Donet Redux.
+It is suitable for building .NET applications.
 
 It has four characteristics:
 
@@ -23,7 +23,7 @@ It has four characteristics:
 
 ## Documentation
 
-Language: [English](README.md) | [Chinese](doc/README.zh.md)
+Language: [English](README.md) | [Chinese](README.zh.md)
 
 
 
