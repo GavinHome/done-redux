@@ -102,7 +102,6 @@ internal class CounterState
         return state;
     }
 }
-```
 ````
 
 

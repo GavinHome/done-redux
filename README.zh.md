@@ -31,7 +31,7 @@ Done Redux 是基于Redux思想的组合式状态管理框架，非常适合构�
 -   初始化状态，Reducer，容器；
 -   监听订阅，发起指令
 
-````c#
+```c#
 var state = CounterState.initState();
 var reduer = CounterReducer.buildReducer();
 var store = Creator.createStore<CounterState>(state, reducer);
@@ -102,7 +102,6 @@ internal class CounterState
     }
 }
 ```
-````
 
 
 
