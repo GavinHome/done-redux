@@ -32,23 +32,5 @@ public static class ActionCreator
 
     public static System.Action bindAction(Action action, Dispatch dispatch) => () => dispatch(action);
 
-    public static void Dispatch(this Action action, Dispatch dispatch) => dispatch(action);
-
-    ////public static object bindActionCreators(Type type, Dispatch dispatch, params object[] param)
-    ////{
-    ////    if (type == null)
-    ////    {
-    ////        throw new ArgumentException("The instance is null. Or The type is error.");
-    ////    }
-    ////    var map = new Dictionary<Type, object>();
-    ////    var keys = type.GetMethods(BindingFlags.NonPublic | BindingFlags.Static| BindingFlags.Instance).Where(m => m.ReturnType == typeof(Action)).ToList();
-    ////    foreach (var key in keys)
-    ////    {
-    ////        var paramsArry = key.GetParameters();
-    ////        //var action = "";
-    ////        //var dispatch = "";
-    ////        //map.Add(key.Name, dispatch);
-    ////    }
-    ////    return map;
-    ////}
+    ////public static void Dispatch(this Action action, Dispatch dispatch) => dispatch(action);
 }

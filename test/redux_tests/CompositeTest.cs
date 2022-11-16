@@ -53,7 +53,7 @@ public class CompositeTests
         Assert.IsTrue(store.GetState().Counter.Count == -1);
         Assert.IsTrue(store.GetState().Message.Id == 0 && store.GetState().Message.Content == "test");
 
-        store.Dispatch(MessageActionCreator.modify(new { Id = 1, Content = "helloworld" }));
+        store.Dispatch(MessageActionCreator.modify(1, "helloworld"));
 
         Assert.IsTrue(store.GetState().Counter.Count == -1);
         Assert.IsTrue(store.GetState().Message.Id == 1 && store.GetState().Message.Content == "helloworld");

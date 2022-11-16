@@ -1,6 +1,8 @@
 using System.Text.Json;
 using Redux.Basic;
 using Message;
+using Counter;
+using Redux.Framework;
 
 namespace Message;
 
@@ -30,7 +32,9 @@ public class MessageTests
             Console.WriteLine($"[Subscribe] last-state:{JsonSerializer.Serialize(state)}");
         });
 
-        store.Dispatch(MessageActionCreator.modify(new { Id = 1, Content = "helloword" }));
+        //store.Dispatch(MessageActionCreator.modify(1, "helloworld"));
+        var modify = ActionCreator.bind<int, string>(MessageActionCreator.modify, store.Dispatch);
+        modify(1, "helloworld");
 
         Assert.IsTrue(state.Id == 0);
         Assert.IsTrue(state.Content == "test");

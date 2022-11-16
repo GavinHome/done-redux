@@ -10,8 +10,8 @@ internal enum MessageAction
 
 internal class MessageActionCreator
 {
-    internal static Action modify(dynamic payload)
+    internal static Action modify(int id, string content)
     {
-        return new Action(MessageAction.modify, payload);
+        return new Action(MessageAction.modify, new MessageState(id, content));
     }
 }

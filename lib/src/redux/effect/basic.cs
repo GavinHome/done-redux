@@ -38,4 +38,3 @@ public class StoreContext<T> : Context<T>
         return this;
     }
 }
-
