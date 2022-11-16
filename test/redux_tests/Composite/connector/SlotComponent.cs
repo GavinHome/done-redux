@@ -21,7 +21,7 @@ internal class MessageComponent : Component<MessageState> //: AbstractLogic<Mess
     public MessageComponent() : base(
      //view: buildView,
      //effect: buildEffect(),
-     reducer: MessageReducer.buildReducer()
+     reducer: MessageReducer.buildReducer(), null
    )
     { }
 
