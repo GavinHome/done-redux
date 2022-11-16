@@ -1,3 +1,4 @@
+using Redux;
 using Redux.Basic;
 using Redux.Framework;
 using System.Text.Json;
@@ -72,6 +73,8 @@ public class CounterTests
     [Test]
     public void TestBindCreator()
     {
+        Aop.setTest();
+
         var state = CounterState.initState();
 
         var enhancers = Redux.Middleware.applyMiddleware<CounterState>(
