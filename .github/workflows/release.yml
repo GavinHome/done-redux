@@ -30,9 +30,9 @@ jobs:
     - name: build
       run: dotnet build --configuration Release lib\src\redux\redux.csproj 
     - name: Create the package
-      run: dotnet pack --configuration Release lib\src\redux\redux.csproj --version-suffix ${{ github.event.inputs.version }}
-    - name: Create the package
+      run: dotnet pack --configuration Release lib\src\redux\redux.csproj -p:PackageVersion=${{ github.event.inputs.version }} -p:PackageReleaseNotes=${{ github.event.inputs.notes }}
+    - name: Find
       run: |
         dir .\lib\src\redux\bin\Release\
-    # - name: Publish the package
-    #   run: dotnet nuget push lib\src\redux\redux.csproj\bin\Release\DoneRedux.*.nupkg --api-key ${{ secrets.NugetKey }} --source https://api.nuget.org/v3/index.json -SkipDuplicate 
+    - name: Publish the package
+      run: dotnet nuget push lib\src\redux\redux.csproj\bin\Release\DoneRedux.${{ github.event.inputs.version }}.nupkg --api-key ${{ secrets.NugetKey }} --source https://api.nuget.org/v3/index.json -SkipDuplicate 
