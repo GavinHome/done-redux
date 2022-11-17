@@ -1,4 +1,4 @@
-﻿namespace sample;
+﻿namespace example;
 
 public partial class AppShell : Shell
 {
