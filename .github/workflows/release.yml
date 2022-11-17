@@ -30,7 +30,7 @@ jobs:
     - name: build
       run: dotnet build --configuration Release lib\src\redux\redux.csproj 
     - name: Create the package
-      run: dotnet pack --configuration Release lib\src\redux\redux.csproj -p:PackageVersion=${{ github.event.inputs.version }} -p:PackageReleaseNotes=${{ github.event.inputs.notes }}
+      run: dotnet pack --configuration Release lib\src\redux\redux.csproj -p:PackageVersion=${{ github.event.inputs.version }} -p:PackageReleaseNotes="${{ github.event.inputs.notes }}"
     - name: Find
       run: |
         dir .\lib\src\redux\bin\Release\
