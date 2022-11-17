@@ -16,13 +16,11 @@
 
   <ItemGroup>
     <Compile Remove="effect\**" />
+    <Compile Remove="maui\**" />
     <EmbeddedResource Remove="effect\**" />
+    <EmbeddedResource Remove="maui\**" />
     <None Remove="effect\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Remove="maui\listAdapter.cs" />
-    <Compile Remove="maui\widget.cs" />
+    <None Remove="maui\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -30,7 +28,6 @@
     <None Remove="middleware\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="maui\" />
     <Folder Include="middlewares\" />
   </ItemGroup>
 </Project>

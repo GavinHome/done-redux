@@ -1,6 +1,4 @@
-﻿using Message;
-
-namespace Todo;
+﻿namespace Todo;
 
 [Serializable]
 internal class ToDoState

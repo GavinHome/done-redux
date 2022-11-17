@@ -1,8 +1,6 @@
-﻿using Redux.Basic;
-using Redux.Dependencies;
-using Redux.Dependencies.Basic;
+﻿using Redux.Dependencies;
 
-namespace Redux.Component;
+namespace Redux;
 
 public interface AbstractComponent<T>
 {

@@ -11,7 +11,7 @@ internal class CompositeState
 
     public CompositeState()
     {
-        Counter = new CounterState();
+        Counter = new Counter.CounterState();
         Message = new MessageState();
     }
 

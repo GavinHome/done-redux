@@ -1,7 +1,4 @@
-﻿using System;
-using Action = Redux.Basic.Action;
-
-namespace Message;
+﻿namespace Message;
 
 internal enum MessageAction
 {
@@ -10,8 +7,8 @@ internal enum MessageAction
 
 internal class MessageActionCreator
 {
-    internal static Action modify(int id, string content)
+    internal static Redux.Action modify(int id, string content)
     {
-        return new Action(MessageAction.modify, new MessageState(id, content));
+        return new Redux.Action(MessageAction.modify, new MessageState(id, content));
     }
 }

@@ -1,7 +1,5 @@
 ﻿using Redux.Adapter;
-using Redux.Basic;
-
-namespace Redux.Dependencies.Basic;
+namespace Redux;
 
 /// Representation of each dependency
 public abstract class Dependent<T> //: AbstractAdapterBuilder<T>
@@ -44,8 +42,8 @@ public class Dependencies<T>
             subs.Add(adapter.createSubReducer());
         }
 
-        var subReduces = Redux.Reducer.combineSubReducers(subs);
-        return Reducer.combineReducers(new List<Reducer<T>> { subReduces });
+        var subReduces = Redux.ReducerCreator.combineSubReducers(subs);
+        return ReducerCreator.combineReducers(new List<Reducer<T>> { subReduces });
     }
 
     public Dependent<T> slot(String type) => slots[type];
@@ -78,7 +76,7 @@ public class FlowDependencies<T>
         this.build = build;
     }
 
-    public Reducer<T> createReducer() => (T state, Redux.Basic.Action action) =>
+    public Reducer<T> createReducer() => (T state, Redux.Action action) =>
     {
         T copy = state;
         bool hasChanged = false;

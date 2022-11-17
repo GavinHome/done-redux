@@ -1,8 +1,4 @@
-﻿using Redux.Basic;
-using Redux.Connector;
-using Redux.Dependencies.Basic;
-
-namespace Redux.Dependencies;
+﻿namespace Redux.Dependencies;
 
 public class _Dependent<T, P> : Dependent<T>
 {

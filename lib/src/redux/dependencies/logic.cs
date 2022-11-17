@@ -1,12 +1,4 @@
-﻿using Redux.Basic;
-using Redux.Dependencies.Basic;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Redux.Dependencies;
+﻿namespace Redux.Dependencies;
 
 public abstract class AbstractLogic<T>
 {
@@ -36,5 +28,5 @@ public abstract class Logic<T> : AbstractLogic<T>
 
     protected virtual Reducer<T> protectedDependenciesReducer => protectedDependencies?.createReducer();
 
-    public override Reducer<T> createReducer() => Redux.Reducer.combineReducers(new List<Reducer<T>>() { protectedReducer, protectedDependenciesReducer });
+    public override Reducer<T> createReducer() => Redux.ReducerCreator.combineReducers(new List<Reducer<T>>() { protectedReducer, protectedDependenciesReducer });
 }

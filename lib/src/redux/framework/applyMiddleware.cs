@@ -1,9 +1,6 @@
-﻿using Redux.Basic;
-using Action = Redux.Basic.Action;
+﻿namespace Redux;
 
-namespace Redux;
-
-public class Middleware
+public class Enhancers
 {
     ///// Accumulate a list of Middleware that enhances Dispatch to the Store.
     ///// The wrapped direction of the Store.dispatch is from inside to outside.

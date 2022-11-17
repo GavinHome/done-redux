@@ -1,6 +1,4 @@
-﻿using Message;
-using Todo;
-using Action = Redux.Basic.Action;
+﻿using Todo;
 
 namespace TodoList;
 
@@ -12,13 +10,13 @@ internal enum TodoListAction
 
 internal class ToDoListActionCreator
 {
-    internal static Action initToDos(List<ToDoState> toDos)
+    internal static Redux.Action initToDos(List<ToDoState> toDos)
     {
-        return new Action(TodoListAction.initToDos, toDos);
+        return new Redux.Action(TodoListAction.initToDos, toDos);
     }
 
-    internal static Action onAdd()
+    internal static Redux.Action onAdd()
     {
-        return new Action(TodoListAction.onAdd);
+        return new Redux.Action(TodoListAction.onAdd);
     }
 }

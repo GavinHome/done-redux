@@ -1,8 +1,5 @@
-﻿using Redux.Basic;
-using Redux.Utils;
-
+﻿using Redux;
 namespace Message;
-using Action = Redux.Basic.Action;
 
 internal class MessageReducer
 {
@@ -10,10 +7,10 @@ internal class MessageReducer
     {
         var map = new Dictionary<Object, Reducer<MessageState>>();
         map.Add(MessageAction.modify, _modify);
-        return Redux.Helper.asReducers<MessageState>(map);
+        return Redux.Converter.asReducers<MessageState>(map);
     }
 
-    private static MessageState _modify(MessageState state, Action action)
+    private static MessageState _modify(MessageState state, Redux.Action action)
     {
         MessageState? newState = state.Clone(); //clone
         newState.Id = action.Payload.Id;

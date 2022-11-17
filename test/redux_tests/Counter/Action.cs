@@ -1,52 +1,19 @@
-﻿using System;
-
-namespace Counter;
-using Action = Redux.Basic.Action;
-
+﻿namespace Counter;
 internal enum CounterAction
 {
     add,
     minus,
-    ////onCompute,
 }
 
 internal class CounterActionCreator
 {
-    internal static Action add(int payload)
+    internal static Redux.Action add(int payload)
     {
-        return new Action(CounterAction.add, payload);
+        return new Redux.Action(CounterAction.add, payload);
     }
 
-    internal static Action minus(int payload)
+    internal static Redux.Action minus(int payload)
     {
-        return new Action(CounterAction.minus, payload);
-    }
-
-    ////internal static Action onCompute()
-    ////{
-    ////    return new Action(CounterAction.onCompute);
-    ////}
-}
-
-internal class CounterActionCreators
-{
-    internal Action add(int payload)
-    {
-        return new Action(CounterAction.add, payload);
-    }
-
-    internal Action minus(int payload)
-    {
-        return new Action(CounterAction.minus, payload);
-    }
-
-    internal static Action add1(int payload)
-    {
-        return new Action(CounterAction.add, payload);
-    }
-
-    internal static Action minus1(int payload)
-    {
-        return new Action(CounterAction.minus, payload);
+        return new Redux.Action(CounterAction.minus, payload);
     }
 }

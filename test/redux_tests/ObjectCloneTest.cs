@@ -1,6 +1,4 @@
-using NUnit.Framework;
-using Redux.Utils;
-
+using Redux;
 namespace ObjectCloneTests;
 
 public class ObjectCloneTest
@@ -14,8 +12,8 @@ public class ObjectCloneTest
     [Test]
     public void Test()
     {
-        Object obj = null;
-        var newObj = obj.Clone();
+        Object? obj = null;
+        var newObj = obj?.Clone();
         Assert.IsNull(newObj);
 
         try

@@ -1,8 +1,4 @@
 using Redux;
-using Redux.Basic;
-using Redux.Framework;
-using System.Text.Json;
-using Action = Redux.Basic.Action;
 
 namespace Counter;
 
@@ -17,25 +13,18 @@ public class CounterTests
     public void Test()
     {
         var state = CounterState.initState();
-
-        var enhancers = Redux.Middleware.applyMiddleware<CounterState>(
-            Redux.Middlewares.logMiddleware<CounterState>((state) => JsonSerializer.Serialize(state), "CounterTests"),
-            Redux.Middlewares.exceptionMiddleware<CounterState>("CounterTests"),
-            Redux.Middlewares.performanceMiddleware<CounterState>("CounterTests")
-        );
-
-        Store<CounterState> store = Redux.Creator.createStore<CounterState>(state, CounterReducer.buildReducer(), enhancers);
+        var reducer = CounterReducer.buildReducer();
+        var store = StoreCreator.createStore<CounterState>(state, reducer);
 
         store.Subscribe(() =>
         {
-            CounterState lastState = store.GetState();
-            Console.WriteLine($"[Subscribe] last-state:{JsonSerializer.Serialize(lastState)}");
+            var lastState = store.GetState();
+            var stateJson = System.Text.Json.JsonSerializer.Serialize(lastState);
+            Console.WriteLine($"[Subscribe] last-state:{stateJson}");
         });
 
         store.Dispatch(CounterActionCreator.add(1));
         store.Dispatch(CounterActionCreator.minus(2));
-
-        ////await store.dispatch(CounterActionCreator.onCompute);
 
         Assert.IsTrue(state.Count == 0);
         Assert.IsTrue(store.GetState().Count == -1);
@@ -46,15 +35,16 @@ public class CounterTests
     {
         var state = CounterState.initState();
 
-        var enhancers = Redux.Middleware.applyMiddleware<CounterState>(
-            Redux.Middlewares.logMiddleware<CounterState>((state) => JsonSerializer.Serialize(state), "CounterTests"),
-            Redux.Middlewares.exceptionMiddleware<CounterState>("CounterTests"),
-            Redux.Middlewares.performanceMiddleware<CounterState>("CounterTests")
+        var enhancers = Enhancers.applyMiddleware<CounterState>(
+            Middlewares.logMiddleware<CounterState>((state) =>
+                System.Text.Json.JsonSerializer.Serialize(state), "CounterTests"),
+            Middlewares.exceptionMiddleware<CounterState>("CounterTests"),
+            Middlewares.performanceMiddleware<CounterState>("CounterTests")
         );
 
-        Store<CounterState> store = Redux.Creator.createStore<CounterState>(state, CounterReducer.buildReducer(), enhancers);
+        var store = StoreCreator.createStore<CounterState>(state, CounterReducer.buildReducer(), enhancers);
 
-        Unsubscribe subscribe = store.Subscribe(() =>
+        var subscribe = store.Subscribe(() =>
         {
             Assert.IsTrue(1 != 1);
         });
@@ -77,18 +67,19 @@ public class CounterTests
 
         var state = CounterState.initState();
 
-        var enhancers = Redux.Middleware.applyMiddleware<CounterState>(
-            Redux.Middlewares.logMiddleware<CounterState>((state) => JsonSerializer.Serialize(state), "CounterTests"),
-            Redux.Middlewares.exceptionMiddleware<CounterState>("CounterTests"),
-            Redux.Middlewares.performanceMiddleware<CounterState>("CounterTests")
+        var enhancers = Enhancers.applyMiddleware<CounterState>(
+            Middlewares.logMiddleware<CounterState>((state) =>
+                System.Text.Json.JsonSerializer.Serialize(state), "CounterTests"),
+            Middlewares.exceptionMiddleware<CounterState>("CounterTests"),
+            Middlewares.performanceMiddleware<CounterState>("CounterTests")
         );
 
-        Store<CounterState> store = Redux.Creator.createStore<CounterState>(state, CounterReducer.buildReducer(), enhancers);
+        var store = StoreCreator.createStore<CounterState>(state, CounterReducer.buildReducer(), enhancers);
 
         store.Subscribe(() =>
         {
             CounterState lastState = store.GetState();
-            Console.WriteLine($"[Subscribe] last-state:{JsonSerializer.Serialize(lastState)}");
+            Console.WriteLine($"[Subscribe] last-state:{System.Text.Json.JsonSerializer.Serialize(lastState)}");
         });
 
         ////store.Dispatch(CounterActionCreator.add(1));

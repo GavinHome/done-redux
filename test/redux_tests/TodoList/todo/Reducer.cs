@@ -1,10 +1,5 @@
-﻿using Redux.Basic;
-using Redux.Utils;
-using TodoList;
-
+﻿using Redux;
 namespace Todo;
-using Action = Redux.Basic.Action;
-
 internal class TodoReducer
 {
     internal static Reducer<ToDoState> buildReducer()
@@ -12,10 +7,10 @@ internal class TodoReducer
         var map = new Dictionary<Object, Reducer<ToDoState>>();
         map.Add(ToDoAction.edit, _edit);
         map.Add(ToDoAction.done, _markDone);
-        return Redux.Helper.asReducers<ToDoState>(map);
+        return Redux.Converter.asReducers<ToDoState>(map);
     }
 
-    private static ToDoState _edit(ToDoState state, Action action)
+    private static ToDoState _edit(ToDoState state, Redux.Action action)
     {
         ToDoState? toDo = action.Payload;
         if (state.Id == toDo.Id)
@@ -29,7 +24,7 @@ internal class TodoReducer
         return state;
     }
 
-    private static ToDoState _markDone(ToDoState state, Action action)
+    private static ToDoState _markDone(ToDoState state, Redux.Action action)
     {
         String? id = action.Payload;
         if (state.Id == id)

@@ -1,7 +1,4 @@
-﻿using Redux.Basic;
-using Action = Redux.Basic.Action;
-
-namespace Redux;
+﻿namespace Redux;
 
 /// Middleware for print action dispatch.
 /// It works on debug mode.

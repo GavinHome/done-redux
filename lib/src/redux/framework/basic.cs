@@ -1,6 +1,4 @@
-﻿using static System.Formats.Asn1.AsnWriter;
-
-namespace Redux.Basic;
+﻿namespace Redux;
 
 public class Action
 {

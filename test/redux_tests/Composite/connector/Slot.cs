@@ -1,35 +1,26 @@
-﻿using Counter;
-using Message;
-using Redux.Basic;
-using Redux.Component;
-using Redux.Connector;
-using Redux.Dependencies;
-using System.ComponentModel;
-using Todo;
+﻿namespace Composite;
 
-namespace Composite;
-
-internal class CounterConnector : ConnOp<CompositeState, CounterState>
+internal class CounterConnector : Redux.Connector.ConnOp<CompositeState, Counter.CounterState>
 {
-    public override CounterState Get(CompositeState state)
+    public override Counter.CounterState Get(CompositeState state)
     {
         return state.Counter;
     }
 
-    public override void Set(CompositeState state, CounterState subState)
+    public override void Set(CompositeState state, Counter.CounterState subState)
     {
         state.Counter = subState;
     }
 }
 
-internal class MessageConnector : ConnOp<CompositeState, MessageState>
+internal class MessageConnector : Redux.Connector.ConnOp<CompositeState, Message.MessageState>
 {
-    public override MessageState Get(CompositeState state)
+    public override Message.MessageState Get(CompositeState state)
     {
         return state.Message;
     }
 
-    public override void Set(CompositeState state, MessageState subState)
+    public override void Set(CompositeState state, Message.MessageState subState)
     {
         state.Message = subState;
     }

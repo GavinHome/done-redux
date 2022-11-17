@@ -34,15 +34,17 @@ Language: [English](README.md) | [Chinese](README.zh.md)
 -   initiate commands
 
 ````c#
+using Redux;
+
 var state = CounterState.initState();
-var reduer = CounterReducer.buildReducer();
-var store = Creator.createStore<CounterState>(state, reducer);
+var reducer = CounterReducer.buildReducer();
+var store = StoreCreator.createStore<CounterState>(state, reducer);
 
 store.Subscribe(() =>
 {
-    CounterState lastState = store.GetState();
-    var output = JsonSerializer.Serialize(lastState);
-    Console.WriteLine($"[Subscribe] last-state:{output}");
+	var lastState = store.GetState();
+	var stateJson = System.Text.Json.JsonSerializer.Serialize(lastState);
+	Console.WriteLine($"[Subscribe] last-state:{stateJson}");
 });
 
 store.Dispatch(CounterActionCreator.add(1));
@@ -55,17 +57,17 @@ internal class CounterReducer
         var map = new Dictionary<Object, Reducer<CounterState>>();
         map.Add(CounterAction.add, _add);
         map.Add(CounterAction.minus, _minus);
-        return Redux.Helper.asReducers<CounterState>(map);
+        return Converter.asReducers<CounterState>(map);
     }
 
-    private static CounterState _minus(CounterState state, Action action)
+    private static CounterState _minus(CounterState state, Redux.Action action)
     {
         CounterState? newState = state.Clone(); //clone
         newState.Count -= action.Payload;
         return newState;
     }
 
-    private static CounterState _add(CounterState state, Action action)
+    private static CounterState _add(CounterState state, Redux.Action action)
     {
         CounterState? newState = state.Clone(); //clone
         newState.Count += action.Payload;
@@ -81,14 +83,14 @@ internal enum CounterAction
 
 internal class CounterActionCreator
 {
-    internal static Action add(int payload)
+    internal static Redux.Action add(int payload)
     {
-        return new Action(CounterAction.add, payload);
+        return new Redux.Action(CounterAction.add, payload);
     }
 
-    internal static Action minus(int payload)
+    internal static Redux.Action minus(int payload)
     {
-        return new Action(CounterAction.minus, payload);
+        return new Redux.Action(CounterAction.minus, payload);
     }
 }
 

@@ -1,29 +1,21 @@
-﻿using Counter;
-using Message;
-using Redux.Component;
+﻿namespace Composite;
 
-namespace Composite;
-
-internal class CounterComponent : Component<CounterState> //: AbstractLogic<CounterState>
+internal class CounterComponent : Redux.Component<Counter.CounterState>
 {
     public CounterComponent() : base(
          //view: buildView,
          //effect: buildEffect(),
-         reducer: CounterReducer.buildReducer()
+         reducer: Counter.CounterReducer.buildReducer()
        )
     { }
-
-    //public override Reducer<CounterState> createReducer() => CounterReducer.buildReducer();
 }
 
-internal class MessageComponent : Component<MessageState> //: AbstractLogic<MessageState>
+internal class MessageComponent : Redux.Component<Message.MessageState>
 {
     public MessageComponent() : base(
      //view: buildView,
      //effect: buildEffect(),
-     reducer: MessageReducer.buildReducer(), null
+     reducer: Message.MessageReducer.buildReducer(), null
    )
     { }
-
-    //public override Reducer<MessageState> createReducer() => MessageReducer.buildReducer();
 }

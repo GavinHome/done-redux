@@ -1,6 +1,4 @@
-﻿using System.Diagnostics;
-
-namespace Redux;
+﻿namespace Redux;
 
 public static class Aop
 {
@@ -9,7 +7,7 @@ public static class Aop
     /// Is app run a debug mode.
     public static bool isDebug()
     {
-        return isTest || Debugger.IsAttached;
+        return isTest || System.Diagnostics.Debugger.IsAttached;
     }
 
     public static void setTest()

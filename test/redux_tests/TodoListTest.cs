@@ -1,7 +1,3 @@
-using Redux;
-using Redux.Basic;
-using Redux.Connector;
-using Redux.Dependencies.Basic;
 using System.Text.Json;
 using Todo;
 
@@ -21,18 +17,18 @@ public class TodoListTest
         var state = TodoListState.initState();
         var reducers = TodoListReducer.buildReducer();
 
-        var enhancers = Redux.Middleware.applyMiddleware<TodoListState>(
+        var enhancers = Redux.Enhancers.applyMiddleware<TodoListState>(
             Redux.Middlewares.logMiddleware<TodoListState>((state) => JsonSerializer.Serialize(state), "TodoListTests"),
             Redux.Middlewares.exceptionMiddleware<TodoListState>("TodoListTests"),
             Redux.Middlewares.performanceMiddleware<TodoListState>("TodoListTests")
         );
 
-        Dependencies<TodoListState> dependencies = new Dependencies<TodoListState>(
-            adapter: new NoneConn<TodoListState>().add(Adapter.adapter)
+        var dependencies = new Redux.Dependencies<TodoListState>(
+            adapter: new Redux.Connector.NoneConn<TodoListState>().add(Adapter.adapter)
         //adapter: new NoneConn<TodoListState>() + Adapter.adapter
         );
 
-        Store<TodoListState> store = Creator.createStore<TodoListState>(state, reducers, enhancers, dependencies);
+        var store = Redux.StoreCreator.createStore<TodoListState>(state, reducers, enhancers, dependencies);
 
         store.Subscribe(() =>
         {

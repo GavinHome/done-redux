@@ -1,8 +1,5 @@
 using Counter;
 using Message;
-using Redux;
-using Redux.Basic;
-using Redux.Dependencies.Basic;
 using System.Text.Json;
 
 namespace Composite;
@@ -21,21 +18,22 @@ public class CompositeTests
         var state = CompositeState.initState();
         var reducers = CompositeReducer.buildReducer();
 
-        var enhancers = Redux.Middleware.applyMiddleware<CompositeState>(
-            Redux.Middlewares.logMiddleware<CompositeState>((state) => JsonSerializer.Serialize(state), "CompositeTests"),
+        var enhancers = Redux.Enhancers.applyMiddleware<CompositeState>(
+            Redux.Middlewares.logMiddleware<CompositeState>(
+                (state) => JsonSerializer.Serialize(state), "CompositeTests"),
             Redux.Middlewares.exceptionMiddleware<CompositeState>("CompositeTests"),
             Redux.Middlewares.performanceMiddleware<CompositeState>("CompositeTests")
         );
 
-        Dependencies<CompositeState> dependencies = new Dependencies<CompositeState>(
-            slots: new Dictionary<string, Dependent<CompositeState>>()
+        var dependencies = new Redux.Dependencies<CompositeState>(
+            slots: new Dictionary<string, Redux.Dependent<CompositeState>>()
             {
                 { "counter",  new CounterConnector().add(new CounterComponent())  },
                 { "message",  new MessageConnector().add(new MessageComponent())  }
             }
         );
 
-        Store<CompositeState> store = Creator.createStore<CompositeState>(state, reducers, enhancers, dependencies);
+        var store = Redux.StoreCreator.createStore<CompositeState>(state, reducers, enhancers, dependencies);
 
         store.Subscribe(() =>
         {

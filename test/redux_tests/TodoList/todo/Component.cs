@@ -1,8 +1,6 @@
-﻿using Redux.Component;
+﻿namespace Todo;
 
-namespace Todo;
-
-internal class ToDoComponent : Component<ToDoState>
+internal class ToDoComponent : Redux.Component<ToDoState>
 {
     public ToDoComponent() : base(
           //view: buildView,

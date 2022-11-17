@@ -1,8 +1,6 @@
-﻿using Redux.Basic;
+﻿namespace Redux;
 
-namespace Redux;
-
-public static partial class Helper
+public static class Converter
 {
     public static Reducer<T> asReducers<T>(Dictionary<object, Reducer<T>> map)
     {

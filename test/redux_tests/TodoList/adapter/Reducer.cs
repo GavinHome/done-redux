@@ -1,24 +1,18 @@
-﻿using Redux.Basic;
-using Redux.Utils;
-using System.Linq;
-using System.Xml;
+﻿using Redux;
 using Todo;
-using TodoList;
 
 namespace TodoList;
-using Action = Redux.Basic.Action;
-
 internal class TodoListAdapterReducer
 {
-    internal static Reducer<TodoListState> buildReducer()
+    internal static Redux.Reducer<TodoListState> buildReducer()
     {
-        var map = new Dictionary<Object, Reducer<TodoListState>>();
+        var map = new Dictionary<Object, Redux.Reducer<TodoListState>>();
         map.Add(TodoListAdapterAction.add, _add);
         map.Add(TodoListAdapterAction.remove, _remove);
-        return Redux.Helper.asReducers<TodoListState>(map);
+        return Redux.Converter.asReducers<TodoListState>(map);
     }
 
-    private static TodoListState _add(TodoListState state, Action action)
+    private static TodoListState _add(TodoListState state, Redux.Action action)
     {
         ToDoState? toDo = action.Payload;
         if (toDo != null)
@@ -33,7 +27,7 @@ internal class TodoListAdapterReducer
         return state;
     }
 
-    private static TodoListState _remove(TodoListState state, Action action)
+    private static TodoListState _remove(TodoListState state, Redux.Action action)
     {
         String? id = action.Payload;
         List<ToDoState> list = state.toDos?.ToList() ?? new List<ToDoState>();

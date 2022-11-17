@@ -1,8 +1,4 @@
-﻿using System.Diagnostics;
-using Redux.Basic;
-using Action = Redux.Basic.Action;
-
-namespace Redux;
+﻿namespace Redux;
 
 /// Middleware for print action dispatch performance by time consuming.
 /// It works on debug mode.

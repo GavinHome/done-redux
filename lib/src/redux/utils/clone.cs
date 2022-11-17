@@ -1,4 +1,4 @@
-﻿namespace Redux.Utils;
+﻿namespace Redux;
 
 public static class ObjectCopier
 {

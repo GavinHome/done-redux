@@ -1,10 +1,6 @@
-﻿using Redux.Basic;
-using System;
-using System.Security.Claims;
+﻿namespace Redux;
 
-namespace Redux;
-
-public class Reducer
+public class ReducerCreator
 {
     public static Reducer<T> combineReducers<T>(IList<Reducer<T>> reducers)
     {
@@ -19,7 +15,7 @@ public class Reducer
             return notNullReducers.Single();
         }
 
-        return (T state, Redux.Basic.Action action) =>
+        return (T state, Redux.Action action) =>
         {
             T nextState = state;
             foreach (Reducer<T> reducer in notNullReducers)
@@ -43,10 +39,10 @@ public class Reducer
         if (notNullReducers.Length == 1)
         {
             SubReducer<T> single = notNullReducers.Single();
-            return (T state, Redux.Basic.Action action) => single(state, action, false);
+            return (T state, Redux.Action action) => single(state, action, false);
         }
 
-        return (T state, Redux.Basic.Action action) =>
+        return (T state, Redux.Action action) =>
         {
             T copy = state;
             bool hasChanged = false;
@@ -64,7 +60,7 @@ public class Reducer
     ////{
     ////    return sup == null
     ////        ? null
-    ////        : (Sub state, Redux.Basic.Action action) =>
+    ////        : (Sub state, Redux.Action action) =>
     ////        {
     ////            Sub? result = sup(state, action) as Sub;
     ////            return result;

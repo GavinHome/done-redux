@@ -1,8 +1,4 @@
-﻿using System;
-
-namespace Composite;
-using Action = Redux.Basic.Action;
-
+﻿namespace Composite;
 internal enum CompositeAction
 {
     init,
@@ -10,8 +6,8 @@ internal enum CompositeAction
 
 internal class CompositeActionCreator
 {
-    internal static Action init(int payload)
+    internal static Redux.Action init(int payload)
     {
-        return new Action(CompositeAction.init, payload);
+        return new Redux.Action(CompositeAction.init, payload);
     }
 }

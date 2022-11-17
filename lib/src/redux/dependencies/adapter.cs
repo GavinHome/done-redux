@@ -1,6 +1,4 @@
-﻿using Redux.Basic;
-using Redux.Dependencies;
-using Redux.Dependencies.Basic;
+﻿using Redux.Dependencies;
 
 namespace Redux.Adapter;
 

@@ -1,9 +1,8 @@
-﻿using Redux.Connector;
-using Todo;
+﻿using Todo;
 
 namespace TodoList;
 
-internal class ToDoConnector : ConnOp<TodoListState, ToDoState>
+internal class ToDoConnector : Redux.Connector.ConnOp<TodoListState, ToDoState>
 {
     private int index;
 
