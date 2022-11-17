@@ -41,9 +41,9 @@ var store = StoreCreator.createStore<CounterState>(state, reducer);
 
 store.Subscribe(() =>
 {
-	var lastState = store.GetState();
-	var stateJson = System.Text.Json.JsonSerializer.Serialize(lastState);
-	Console.WriteLine($"[Subscribe] last-state:{stateJson}");
+    var lastState = store.GetState();
+    var stateJson = System.Text.Json.JsonSerializer.Serialize(lastState);
+    Console.WriteLine($"[Subscribe] last-state:{stateJson}");
 });
 
 store.Dispatch(CounterActionCreator.add(1));
