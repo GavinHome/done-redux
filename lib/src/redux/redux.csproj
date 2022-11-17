@@ -11,7 +11,7 @@
     <Product>Done Redux</Product>
     <Copyright>© 2022 GavinHome</Copyright>
     <PackageProjectUrl>https://github.com/GavinHome/done-redux</PackageProjectUrl>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <!--<GeneratePackageOnBuild>True</GeneratePackageOnBuild>-->
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/GavinHome/done-redux</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
