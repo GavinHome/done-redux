@@ -18,7 +18,7 @@
     <Title>Done Redux</Title>
     <PackageTags>redux;framework;state-management;component;functional-programming;dotnet</PackageTags>
     <Description>A combined .Net7 state management framework.</Description>
-    <Version>0.1.1</Version>
+    <Version>0.1.0</Version>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
 

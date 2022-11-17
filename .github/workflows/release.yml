@@ -7,30 +7,31 @@ on:
         description: 'release version'
         required: true
       notes:
-        description: 'Test scenario tags'
+        description: 'release nodtes'
 
 jobs:
   build:
     runs-on: windows-latest
-    steps:
-      - run: |
-          echo "version: ${{ github.event.inputs.version }}"
-          echo "notes: ${{ github.event.inputs.notes }}"
-          echo "inputs: ${{ toJson(github.event.inputs) }}"
-      - run: |
-          echo "NugetKey: ${{ secrets.NugetKey }}"
-
     # steps:
-    # - uses: actions/checkout@v3
-    # - name: Setup dotnet
-    #   uses: actions/setup-dotnet@v3
-    #   with:
-    #     dotnet-version: 7.0.x        
-    # - name: restore
-    #   run: dotnet restore
-    # - name: build
-    #   run: dotnet build --configuration Release lib\src\redux\redux.csproj
-    # - name: Create the package
-    #   run: dotnet pack --configuration Release lib\src\redux\redux.csproj
+    #   - run: |
+    #       echo "version: ${{ github.event.inputs.version }}"
+    #       echo "notes: ${{ github.event.inputs.notes }}"
+    #       echo "inputs: ${{ toJson(github.event.inputs) }}"
+    #   - run: |
+    #       echo "NugetKey: ${{ secrets.NugetKey }}"
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup dotnet
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 7.0.x        
+    - name: restore
+      run: dotnet restore
+    - name: build
+      run: dotnet build --configuration Release lib\src\redux\redux.csproj 
+    - name: Create the package
+      run: dotnet pack --configuration Release lib\src\redux\redux.csproj --version-suffix ${{ github.event.inputs.version }}
+    - ruu: |
+        dir .\lib\src\redux\bin\Release\
     # - name: Publish the package
     #   run: dotnet nuget push lib\src\redux\redux.csproj\bin\Release\DoneRedux.*.nupkg --api-key ${{ secrets.NugetKey }} --source https://api.nuget.org/v3/index.json -SkipDuplicate 
