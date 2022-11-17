@@ -1,3 +1,5 @@
+<p align="center"><img src="./dr.png" align="center" width="175"></p>
+
 <h1>Done Redux</h1>
 
 [![build](https://github.com/GavinHome/done-redux/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/GavinHome/done-redux/actions/workflows/build.yml) [![codecov](https://codecov.io/gh/gavinhome/done-redux/branch/master/graph/badge.svg)](https://codecov.io/gh/gvinhome/done-redux)
