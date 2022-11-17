@@ -1,10 +1,10 @@
-﻿namespace example
+﻿namespace sample;
+
+public partial class AppShell : Shell
 {
-    public partial class AppShell : Shell
-    {
-        public AppShell()
-        {
-            InitializeComponent();
-        }
-    }
+	public AppShell()
+	{
+		InitializeComponent();
+	}
 }
+

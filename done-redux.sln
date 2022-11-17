@@ -8,7 +8,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "解决方案项", "解决�
 		.editorconfig = .editorconfig
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "redux", "lib\src\redux\redux.csproj", "{72E6E71A-B07F-4091-939B-474E038ACCD9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "redux", "lib\src\redux\redux.csproj", "{72E6E71A-B07F-4091-939B-474E038ACCD9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "redux_tests", "test\redux_tests\redux_tests.csproj", "{5CB612E6-0586-4242-AD15-E829033E54C4}"
 EndProject
@@ -16,6 +16,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "example", "example\example.csproj", "{88DD803C-243F-4135-8ECB-8639A7ECE65D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +33,10 @@ Global
 		{5CB612E6-0586-4242-AD15-E829033E54C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5CB612E6-0586-4242-AD15-E829033E54C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5CB612E6-0586-4242-AD15-E829033E54C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88DD803C-243F-4135-8ECB-8639A7ECE65D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88DD803C-243F-4135-8ECB-8639A7ECE65D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88DD803C-243F-4135-8ECB-8639A7ECE65D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88DD803C-243F-4135-8ECB-8639A7ECE65D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
