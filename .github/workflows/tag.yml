@@ -1,0 +1,20 @@
+name: Create/update tag
+
+on: 
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'release version'
+        required: true
+      notes:
+        description: 'release nodtes'
+        
+jobs:
+  create-tag:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: rickstaa/action-create-tag@v1
+        with:
+          tag: "v${{ github.event.inputs.version }}"
+          message: "${{ github.event.inputs.notes }}"
