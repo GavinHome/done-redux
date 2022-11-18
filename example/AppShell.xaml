@@ -6,9 +6,14 @@
     xmlns:local="clr-namespace:example"
     Shell.FlyoutBehavior="Disabled">
 
-    <ShellContent
+    <!--<ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />-->
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:Pages.Counter.View}"
         Route="MainPage" />
 
 </Shell>

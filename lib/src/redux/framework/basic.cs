@@ -1,4 +1,7 @@
-﻿namespace Redux;
+﻿using System.ComponentModel;
+using System.Runtime.CompilerServices;
+
+namespace Redux;
 
 public class Action
 {

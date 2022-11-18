@@ -53,6 +53,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<!--<PackageReference Include="DoneRedux" Version="0.1.1" />-->
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 	</ItemGroup>
 
@@ -61,5 +62,13 @@
 	</ItemGroup>
 	<ItemGroup>
 	  <BundleResource Include="Resources\Images\dotnet_bot.svg" />
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\lib\src\redux\redux.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+	  <MauiXaml Update="Pages\Counter\View.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 </Project>

@@ -40,6 +40,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="component\routes.cs~RF78c6ba5.TMP" />
     <None Remove="utils\" />
     <None Remove="middleware\" />
   </ItemGroup>
