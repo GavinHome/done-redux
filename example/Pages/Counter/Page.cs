@@ -1,6 +1,6 @@
 namespace example.Pages.Counter;
 
-internal class CounterPage : Redux.Page<Counter.CounterState, dynamic>
+internal class CounterPage : Redux.Maui.Page<Counter.CounterState, dynamic>
 {
     public CounterPage() : base(
          initState: (p) => CounterState.initState(),

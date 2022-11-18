@@ -64,6 +64,7 @@
 	  <BundleResource Include="Resources\Images\dotnet_bot.svg" />
 	</ItemGroup>
 	<ItemGroup>
+	  <ProjectReference Include="..\lib\src\maui_redux\maui_redux.csproj" />
 	  <ProjectReference Include="..\lib\src\redux\redux.csproj" />
 	</ItemGroup>
 	<ItemGroup>

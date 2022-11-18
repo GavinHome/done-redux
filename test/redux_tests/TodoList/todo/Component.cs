@@ -1,9 +1,8 @@
 ﻿namespace Todo;
 
-internal class ToDoComponent : Redux.Component<ToDoState>
+internal class ToDoComponent : Redux.AbstractComponent<ToDoState>
 {
     public ToDoComponent() : base(
-          //view: buildView,
           //effect: buildEffect(),
           reducer: TodoReducer.buildReducer()
         )
