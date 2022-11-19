@@ -25,7 +25,7 @@
             <ShellContent Title="MVVM_Fluent" ContentTemplate="{DataTemplate local:Pages.Counter.Fluent.View}"  Route="MVVM_Fluent" />
         </Tab>
         <Tab Title="Todos" Icon="dotnet_bot.png" Route="Todos">
-            <!--<ShellContent ContentTemplate="{DataTemplate local:MainPage}" Route="Todos" />-->
+            <ShellContent ContentTemplate="{DataTemplate local:Pages.Todos.Page}" Route="Todos" />
         </Tab>
     </TabBar>
 </Shell>
