@@ -3,18 +3,30 @@
     x:Class="example.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:example"
-    Shell.FlyoutBehavior="Disabled">
+    xmlns:local="clr-namespace:example">
 
     <!--<ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />-->
 
-    <ShellContent
+    <!--<ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate local:Pages.Counter.View}"
-        Route="MainPage" />
+        ContentTemplate="{DataTemplate local:Pages.Counter.MVVM.View}"
+        Route="MainPage" />-->
 
+    <TabBar>
+        <Tab Title="Home" Icon="dotnet_bot.png" Route="Home">
+            <ShellContent ContentTemplate="{DataTemplate local:MainPage}" Route="MainPage" />
+        </Tab>
+        <Tab Title="Counter" Icon="dotnet_bot.png" Route="Counter">
+            <ShellContent Title="Traditon" ContentTemplate="{DataTemplate local:Pages.Counter.Traditon.View}"  Route="Traditon" />
+            <ShellContent Title="MVVM" ContentTemplate="{DataTemplate local:Pages.Counter.MVVM.View}"  Route="MVVM" />
+            <ShellContent Title="MVVM_Fluent" ContentTemplate="{DataTemplate local:Pages.Counter.Fluent.View}"  Route="MVVM_Fluent" />
+        </Tab>
+        <Tab Title="Todos" Icon="dotnet_bot.png" Route="Todos">
+            <!--<ShellContent ContentTemplate="{DataTemplate local:MainPage}" Route="Todos" />-->
+        </Tab>
+    </TabBar>
 </Shell>
 

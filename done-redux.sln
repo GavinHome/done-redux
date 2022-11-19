@@ -19,8 +19,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "example", "example\example.csproj", "{CF3314BB-725A-4800-BDFB-725F0523B77F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "maui_redux", "lib\src\maui_redux\maui_redux.csproj", "{507D64D0-5809-4D95-AB37-DD76D78739A3}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,10 +37,6 @@ Global
 		{CF3314BB-725A-4800-BDFB-725F0523B77F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF3314BB-725A-4800-BDFB-725F0523B77F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF3314BB-725A-4800-BDFB-725F0523B77F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{507D64D0-5809-4D95-AB37-DD76D78739A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{507D64D0-5809-4D95-AB37-DD76D78739A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{507D64D0-5809-4D95-AB37-DD76D78739A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{507D64D0-5809-4D95-AB37-DD76D78739A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

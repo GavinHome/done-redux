@@ -23,7 +23,7 @@ public abstract class Component<T> : AbstractComponent<T>
         this._view = view;
     }
 
-    protected Widget _wrapperByDefault(dynamic child) => child;
+    protected Widget _wrapperByDefault(Widget child) => child;
 
     public Widget buildComponent(Store<Object> store, Get<Object> getter)
     {

@@ -51,6 +51,20 @@
 		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
 	</ItemGroup>
+	<ItemGroup>
+	  <AndroidResource Remove="Pages\Counter\MauiRedux\**" />
+	  <AndroidResource Remove="Pages\新文件夹\**" />
+	  <Compile Remove="Pages\Counter\MauiRedux\**" />
+	  <Compile Remove="Pages\新文件夹\**" />
+	  <EmbeddedResource Remove="Pages\Counter\MauiRedux\**" />
+	  <EmbeddedResource Remove="Pages\新文件夹\**" />
+	  <MauiCss Remove="Pages\Counter\MauiRedux\**" />
+	  <MauiCss Remove="Pages\新文件夹\**" />
+	  <MauiXaml Remove="Pages\Counter\MauiRedux\**" />
+	  <MauiXaml Remove="Pages\新文件夹\**" />
+	  <None Remove="Pages\Counter\MauiRedux\**" />
+	  <None Remove="Pages\新文件夹\**" />
+	</ItemGroup>
 
 	<ItemGroup>
 		<!--<PackageReference Include="DoneRedux" Version="0.1.1" />-->
@@ -68,7 +82,18 @@
 	  <ProjectReference Include="..\lib\src\redux\redux.csproj" />
 	</ItemGroup>
 	<ItemGroup>
-	  <MauiXaml Update="Pages\Counter\View.xaml">
+	  <Compile Update="Pages\Counter\MVVM\View.xaml.cs">
+	    <DependentUpon>%(Filename)</DependentUpon>
+	  </Compile>
+	  <Compile Update="Pages\Counter\Tradition\View.xaml.cs">
+	    <DependentUpon>View.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+	<ItemGroup>
+	  <MauiXaml Update="Pages\Counter\Tradition\View.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Counter\MVVM\View.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

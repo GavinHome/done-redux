@@ -18,6 +18,10 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <Compile Remove="maui\adapter.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <ProjectReference Include="..\redux\redux.csproj" />
 	</ItemGroup>
 
