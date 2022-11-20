@@ -4,6 +4,17 @@ public abstract class AbstractLogic<T>
 {
     /// To create a reducer<T>
     public abstract Reducer<T> createReducer();
+
+    /// Find a dependent by name
+    //public abstract Dependent<T> slot(String name);
+
+    /// To create each instance's dispatch
+    /// Dispatch is the most important api for users which is provided by framework
+    //public abstract Dispatch createDispatch(
+    //  Dispatch effectDispatch,
+    //  Dispatch nextDispatch
+    //  //ContextSys<T> ctx,
+    //);
 }
 
 /// Four parts

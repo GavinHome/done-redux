@@ -29,7 +29,7 @@ public class Page : ContentPage
 {
     public Page()
     {
-        Content = new ToDoListPage().buildPage(null);
+        Content = null;//new ToDoListPage().buildPage(null).createElement();
         //Content = new VerticalStackLayout
         //{
         //    Children = {
