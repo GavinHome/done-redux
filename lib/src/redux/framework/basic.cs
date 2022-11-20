@@ -84,6 +84,8 @@ public class Store<T>
     public ReplaceReducer<T> ReplaceReducer { get; private set; }
     ////public Task<dynamic> Teardown { get; set; }
 
+    public Store() { }
+
     public Store(T initState, Reducer<T> reducer)
     {
         _state = initState;

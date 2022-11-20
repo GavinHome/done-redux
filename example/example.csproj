@@ -32,11 +32,11 @@
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-ios|AnyCPU'">
 	  <CreatePackage>false</CreatePackage>
-	  <MtouchLink>SdkOnly</MtouchLink>
+	  <MtouchLink>None</MtouchLink>
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-maccatalyst|AnyCPU'">
 	  <CreatePackage>false</CreatePackage>
-	  <MtouchLink>SdkOnly</MtouchLink>
+	  <MtouchLink>None</MtouchLink>
 	</PropertyGroup>
 	<ItemGroup>
 		<!-- App Icon -->
@@ -72,8 +72,8 @@
 	  <BundleResource Include="Resources\Images\dotnet_bot.svg" />
 	</ItemGroup>
 	<ItemGroup>
-	  <ProjectReference Include="..\lib\src\maui_redux\maui_redux.csproj" />
 	  <ProjectReference Include="..\lib\src\redux\redux.csproj" />
+	  <ProjectReference Include="..\lib\src\maui_redux\maui_redux.csproj" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Compile Update="Pages\Counter\MVVM\View.xaml.cs">

@@ -7,7 +7,7 @@ internal class TodoListState
 {
     public List<ToDoState> toDos { get; set; }
 
-    internal static TodoListState initState()
+    internal static TodoListState initState(IDictionary<String,dynamic> args)
     {
         //just demo, do nothing here...
         return new TodoListState();

@@ -19,6 +19,8 @@
 
 	<ItemGroup>
 	  <Compile Remove="maui\adapter.cs" />
+	  <Compile Remove="maui\routes.cs" />
+	  <Compile Remove="maui\basic.cs" />
 	</ItemGroup>
 
 	<ItemGroup>

@@ -5,17 +5,12 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:example">
 
-    <!--<ShellContent
+    <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />-->
+        Route="MainPage" />
 
-    <!--<ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:Pages.Counter.MVVM.View}"
-        Route="MainPage" />-->
-
-    <TabBar>
+    <!--<TabBar>
         <Tab Title="Home" Icon="dotnet_bot.png" Route="Home">
             <ShellContent ContentTemplate="{DataTemplate local:MainPage}" Route="MainPage" />
         </Tab>
@@ -27,6 +22,6 @@
         <Tab Title="Todos" Icon="dotnet_bot.png" Route="Todos">
             <ShellContent ContentTemplate="{DataTemplate local:Pages.Todos.Page}" Route="Todos" />
         </Tab>
-    </TabBar>
+    </TabBar>-->
 </Shell>
 
