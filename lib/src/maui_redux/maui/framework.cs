@@ -1,22 +1,62 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using Java.Lang;
 using Redux.Adapter;
 using Redux.Dependencies;
 
 namespace Redux.Maui;
 
-public abstract class Widget //: View
+public abstract class Widget : Microsoft.Maui.Controls.View
 {
+    public abstract Element createElement();
 }
 
 public abstract class BuildContext
 {
-    Widget widget { get; }
+    protected abstract Widget widget { get; }
+}
+
+public class Element: BuildContext
+{
+    protected override Widget widget => _widget!;
+    protected Widget _widget;
 }
 
 public abstract class StatefulWidget: Widget {
-   public abstract State<StatefulWidget> createState();
+    public override Element createElement() => new StatefulElement(this);
+    public abstract State<StatefulWidget> createState();
 }
+
+///// An [Element] that uses a [StatefulWidget] as its configuration.
+class StatefulElement : ComponentElement
+{
+    /// Creates an element that uses the given widget as its configuration.
+    public StatefulElement(StatefulWidget widget) : base(widget)
+    {
+        //_state = widget.createState();
+        //state._element = this;
+        //state._widget = widget;
+    }
+
+    State<StatefulWidget> state => _state!;
+    State<StatefulWidget>? _state;
+
+    protected override Widget build() => state.build(this);
+}
+
+abstract class ComponentElement : Element
+{
+    /// Creates an element that uses the given widget as its configuration.
+    public ComponentElement(Widget widget) {
+        this._widget = widget;
+    }
+
+    /// Subclasses should override this function to actually call the appropriate
+    /// `build` function (e.g., [StatelessWidget.build] or [State.build]) for
+    /// their widget.
+    protected abstract Widget build();
+}
+
 
 
 public abstract class State<T> where T : StatefulWidget
@@ -30,7 +70,7 @@ public abstract class State<T> where T : StatefulWidget
     {
     }
 
-    protected abstract Widget build(BuildContext context);
+    public abstract Widget build(BuildContext context);
 }
 
 /// Wrapper ComponentWidget if needed like KeepAlive, RepaintBoundary etc.
@@ -78,13 +118,11 @@ public class ComponentWidget<T> : StatefulWidget
     }
 
     public override State<StatefulWidget> createState() => component.createState() as State<StatefulWidget>;
-
-    //public new ComponentState<StatefulWidget> createState1() => component.createState() as ComponentState<StatefulWidget>;
 }
 
 public class ComponentState<T> : State<ComponentWidget<T>>
 {
-    protected override Widget build(BuildContext context)
+    public override Widget build(BuildContext context)
     {
         throw new NotImplementedException();
     }
@@ -149,7 +187,7 @@ class _PageState<T, P> : State<_PageWidget<T, P>>
         _store = widget.page.createStore(widget.param);
     }
 
-    protected override Widget build(BuildContext context)
+    public override Widget build(BuildContext context)
     {
         return widget.page.buildComponent(
           _store,

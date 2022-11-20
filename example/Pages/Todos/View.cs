@@ -17,7 +17,7 @@ public class TodoListView
                     new Label {
                         HorizontalOptions = LayoutOptions.Center,
                         VerticalOptions = LayoutOptions.Center,
-                        Text = "Welcome to Todos Page!"
+                        Text = "Welcome to Todos Redux Page!"
                     }
                 }
             }
@@ -29,13 +29,17 @@ public class Page : ContentPage
 {
     public Page()
     {
-        Content = new VerticalStackLayout
-        {
-            Children = {
-                new Label { HorizontalOptions = LayoutOptions.Center, VerticalOptions = LayoutOptions.Center, Text = "Welcome to Todos Page!"
-                }
-            }
-        };
+        Content = new ToDoListPage().buildPage(null);
+        //Content = new VerticalStackLayout
+        //{
+        //    Children = {
+        //        new Label {
+        //            HorizontalOptions = LayoutOptions.Center,
+        //            VerticalOptions = LayoutOptions.Center,
+        //            Text = "Welcome to Todos Page!"
+        //        }
+        //    }
+        //};
     }
 }
 
