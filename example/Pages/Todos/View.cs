@@ -29,7 +29,7 @@ public class Page : ContentPage
 {
     public Page()
     {
-        Content = null;//new ToDoListPage().buildPage(null).createElement();
+        Content = null; //
         //Content = new VerticalStackLayout
         //{
         //    Children = {
@@ -41,5 +41,13 @@ public class Page : ContentPage
         //    }
         //};
     }
-}
 
+    //public dynamic build() {
+    //    var page = new ToDoListPage().buildPage(null);
+    //    var stateWidget = page as Redux.Maui.StatefulWidget;
+    //    var element = stateWidget.createElement();
+    //    var componentElement = element as Redux.Maui.ComponentElement;
+    //    var view = componentElement.build();
+    //    return view;
+    //}
+}

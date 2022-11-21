@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "example", "example\example.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "maui_redux", "lib\src\maui_redux\maui_redux.csproj", "{705259EF-59E5-4677-8D77-1ED7811D633F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "maui_redux_tests", "test\maui_redux_tests\maui_redux_tests.csproj", "{320772E6-0CDD-46C0-A2A8-B100D230DBBD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{705259EF-59E5-4677-8D77-1ED7811D633F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{705259EF-59E5-4677-8D77-1ED7811D633F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{705259EF-59E5-4677-8D77-1ED7811D633F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{320772E6-0CDD-46C0-A2A8-B100D230DBBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{320772E6-0CDD-46C0-A2A8-B100D230DBBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{320772E6-0CDD-46C0-A2A8-B100D230DBBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{320772E6-0CDD-46C0-A2A8-B100D230DBBD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
