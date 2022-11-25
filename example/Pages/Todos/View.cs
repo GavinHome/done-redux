@@ -1,53 +1,44 @@
 ﻿using System;
+using System.Collections.Generic;
 using Redux;
 
 namespace example.Pages.Todos;
 
-public class TodoListView
-{
-    internal static IView buildView(TodoListState state, Dispatch dispatch)
-    {
-        //return new Page();
-        return new ContentPage
-        {
-            Content = new VerticalStackLayout
-            {
-                Children =
-                {
-                    new Label {
-                        HorizontalOptions = LayoutOptions.Center,
-                        VerticalOptions = LayoutOptions.Center,
-                        Text = "Welcome to Todos Redux Page!"
-                    }
-                }
-            }
-        };
-    }
-}
+//public class TodoListView
+//{
+//    internal static IView buildView(TodoListState state, Dispatch dispatch)
+//    {
+//        return new ContentPage
+//        {
+//            Content = new VerticalStackLayout
+//            {
+//                Children =
+//                {
+//                    new Label {
+//                        HorizontalOptions = LayoutOptions.Center,
+//                        VerticalOptions = LayoutOptions.Center,
+//                        Text = "Welcome to Todos Redux Page!"
+//                    }
+//                }
+//            }
+//        };
+//    }
+//}
 
-public class Page : ContentPage
-{
-    public Page()
-    {
-        Content = null; //
-        //Content = new VerticalStackLayout
-        //{
-        //    Children = {
-        //        new Label {
-        //            HorizontalOptions = LayoutOptions.Center,
-        //            VerticalOptions = LayoutOptions.Center,
-        //            Text = "Welcome to Todos Page!"
-        //        }
-        //    }
-        //};
-    }
-
-    //public dynamic build() {
-    //    var page = new ToDoListPage().buildPage(null);
-    //    var stateWidget = page as Redux.Maui.StatefulWidget;
-    //    var element = stateWidget.createElement();
-    //    var componentElement = element as Redux.Maui.ComponentElement;
-    //    var view = componentElement.build();
-    //    return view;
-    //}
-}
+//public class Page : ContentPage
+//{
+//    public Page()
+//    {
+//        Content = new VerticalStackLayout
+//        {
+//            Children = {
+//                new Label {
+//                    HorizontalOptions = LayoutOptions.Center,
+//                    VerticalOptions = LayoutOptions.Center,
+//                    Text = "Welcome to Todos Page!",
+//                    BindingContext = new TodoListViewModel()
+//                }
+//            }
+//        };
+//    }
+//}

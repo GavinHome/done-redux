@@ -17,11 +17,11 @@
         <Tab Title="Counter" Icon="dotnet_bot.png" Route="Counter">
             <ShellContent Title="Traditon" ContentTemplate="{DataTemplate local:Pages.Counter.Traditon.View}"  Route="Traditon" />
             <ShellContent Title="MVVM" ContentTemplate="{DataTemplate local:Pages.Counter.MVVM.View}"  Route="MVVM" />
-            <ShellContent Title="MVVM_Fluent" ContentTemplate="{DataTemplate local:Pages.Counter.Fluent.View}"  Route="MVVM_Fluent" />
+            <!--<ShellContent Title="MVVM_Fluent" ContentTemplate="{DataTemplate local:Pages.Counter.Fluent.View}"  Route="MVVM_Fluent" />-->
         </Tab>
-        <Tab Title="Todos" Icon="dotnet_bot.png" Route="Todos">
+        <!--<Tab Title="Todos" Icon="dotnet_bot.png" Route="Todos">
             <ShellContent ContentTemplate="{DataTemplate local:Pages.Todos.Page}" Route="Todos" />
-        </Tab>
+        </Tab>-->
     </TabBar>
 </Shell>
 

@@ -58,6 +58,8 @@
 	  <MauiCss Remove="Pages\Counter\MauiRedux\**" />
 	  <MauiXaml Remove="Pages\Counter\MauiRedux\**" />
 	  <None Remove="Pages\Counter\MauiRedux\**" />
+	  <Compile Remove="Pages\Todos\View.cs" />
+	  <Compile Remove="Pages\Todos\Page.cs" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -72,7 +74,6 @@
 	  <BundleResource Include="Resources\Images\dotnet_bot.svg" />
 	</ItemGroup>
 	<ItemGroup>
-	  <ProjectReference Include="..\lib\src\redux\redux.csproj" />
 	  <ProjectReference Include="..\lib\src\maui_redux\maui_redux.csproj" />
 	</ItemGroup>
 	<ItemGroup>
@@ -89,6 +90,9 @@
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\Counter\MVVM\View.xaml">
 	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Todos\Page.xaml">
+	    <SubType></SubType>
 	  </MauiXaml>
 	</ItemGroup>
 </Project>
