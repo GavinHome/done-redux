@@ -74,9 +74,6 @@
 	  <BundleResource Include="Resources\Images\dotnet_bot.svg" />
 	</ItemGroup>
 	<ItemGroup>
-	  <ProjectReference Include="..\lib\src\maui_redux\maui_redux.csproj" />
-	</ItemGroup>
-	<ItemGroup>
 	  <Compile Update="Pages\Counter\MVVM\View.xaml.cs">
 	    <DependentUpon>%(Filename)</DependentUpon>
 	  </Compile>
@@ -94,5 +91,8 @@
 	  <MauiXaml Update="Pages\Todos\Page.xaml">
 	    <SubType></SubType>
 	  </MauiXaml>
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\..\lib\src\redux\redux.csproj" />
 	</ItemGroup>
 </Project>

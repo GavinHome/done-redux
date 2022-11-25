@@ -116,3 +116,5 @@ Version.cpp
 */**/obj/Release
 .vscode
 **/TestResults/*
+**/.DS_Store
+.DS_Store

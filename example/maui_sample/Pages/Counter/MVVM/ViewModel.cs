@@ -2,7 +2,7 @@
 
 namespace example.Pages.Counter.MVVM
 {
-    public class CounterViewModel : Updater
+    public class CounterViewModel : PropertyUpdater
     {
         private Store<CounterState> _store { get; set; }
 

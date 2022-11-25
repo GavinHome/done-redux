@@ -55,30 +55,3 @@ internal class TodoListViewModel : ViewModelUpdater<TodoListState>
 }
 
 
-public abstract class ViewModelUpdater<T> : Updater
-{
-    private Store<T> _store;
-    public Store<T> Store => _store;
-    private T _state;
-
-    public ViewModelUpdater()
-    {
-        _store = StoreCreator.createStore<T>(initState(), reducer(), Enhancer, Dependencies);
-
-        _store.Subscribe(() =>
-        {
-            State = _store.GetState();
-            NotifyChange();
-        });
-    }
-
-    protected T State { get => _state; private set => SetState(ref _state, value); }
-
-    protected Get<T> GetState => _store.GetState;
-    protected Dispatch Dispatch => _store.Dispatch;
-    protected abstract T initState();
-    protected abstract Reducer<T> reducer();
-    protected virtual Dependencies<T> Dependencies { get; } = null;
-    protected virtual StoreEnhancer<T> Enhancer { get; set; } = null;
-    protected abstract void NotifyChange();
-}

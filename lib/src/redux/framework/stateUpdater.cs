@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 
 namespace Redux;
 
-public class Updater : INotifyPropertyChanged
+public class PropertyUpdater : INotifyPropertyChanged
 {
     public event PropertyChangedEventHandler PropertyChanged;
 
@@ -26,4 +26,33 @@ public class Updater : INotifyPropertyChanged
     {
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
+}
+
+
+public abstract class ViewModelUpdater<T> : PropertyUpdater
+{
+    private Store<T> _store;
+    public Store<T> Store => _store;
+    private T? _state;
+
+    public ViewModelUpdater()
+    {
+        _store = StoreCreator.createStore<T>(initState(), reducer(), Enhancer, Dependencies);
+
+        _store.Subscribe(() =>
+        {
+            State = _store.GetState();
+            NotifyChange();
+        });
+    }
+
+    protected T State { get => _state; private set => SetState(ref _state, value); }
+
+    protected Get<T> GetState => _store.GetState;
+    protected Dispatch Dispatch => _store.Dispatch;
+    protected abstract T initState();
+    protected abstract Reducer<T> reducer();
+    protected virtual Dependencies<T> Dependencies { get; } = null;
+    protected virtual StoreEnhancer<T>? Enhancer { get; set; } = null;
+    protected abstract void NotifyChange();
 }
