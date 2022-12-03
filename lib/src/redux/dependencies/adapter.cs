@@ -3,8 +3,7 @@
 namespace Redux.Adapter;
 
 public interface AbstractAdapterBuilder<T>
-{
-    //ListAdapter buildAdapter(ContextSys<T> ctx);
+{    
 }
 
 public interface AbstractAdapter<T> : AbstractAdapterBuilder<T> { }

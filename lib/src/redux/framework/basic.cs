@@ -82,9 +82,6 @@ public class Store<T>
     public Subscribe Subscribe { get; set; }
     ////public Observable<T> Observable { get; set; }
     public ReplaceReducer<T> ReplaceReducer { get; private set; }
-    ////public Task<dynamic> Teardown { get; set; }
-
-    public Store() { }
 
     public Store(T initState, Reducer<T> reducer)
     {

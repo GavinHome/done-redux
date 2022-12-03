@@ -21,9 +21,15 @@ public class StoreCreator
         return enhancer != null ? enhancer(createStore)(preloadedState, reducer) : createStore(preloadedState, reducer);
     }
 
-    public static Store<T> createStore<T>(T preloadedState, Reducer<T> reducer, StoreEnhancer<T>? enhancer, Dependencies<T> dependencies)
+    public static Store<T> createStore<T>(T preloadedState, Reducer<T> reducer, StoreEnhancer<T>? enhancer, Dependencies<T>? dependencies)
     {
-        var combineReducers = ReducerCreator.combineReducers(new List<Reducer<T>>() { reducer, dependencies.createReducer() });
+        var reducers = new List<Reducer<T>>() { reducer };
+        if (dependencies != null)
+        {
+            reducers.Add(dependencies.createReducer());
+        }
+
+        var combineReducers = ReducerCreator.combineReducers(reducers);
         return enhancer != null ? enhancer(createStore)(preloadedState, combineReducers) : createStore(preloadedState, reducer);
     }
 }

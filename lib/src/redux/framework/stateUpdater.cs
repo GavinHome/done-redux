@@ -5,7 +5,7 @@ namespace Redux;
 
 public class PropertyUpdater : INotifyPropertyChanged
 {
-    public event PropertyChangedEventHandler PropertyChanged;
+    public event PropertyChangedEventHandler? PropertyChanged;
 
     protected bool SetState<T>(ref T storage, T value, [CallerMemberName] string? propertyName = null)
     {
@@ -22,12 +22,11 @@ public class PropertyUpdater : INotifyPropertyChanged
         return true;
     }
 
-    private void OnPropertyChanged([CallerMemberName] string propertyName = null)
+    private void OnPropertyChanged([CallerMemberName] string? propertyName = null)
     {
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
 }
-
 
 public abstract class ViewModelUpdater<T> : PropertyUpdater
 {
@@ -52,7 +51,7 @@ public abstract class ViewModelUpdater<T> : PropertyUpdater
     protected Dispatch Dispatch => _store.Dispatch;
     protected abstract T initState();
     protected abstract Reducer<T> reducer();
-    protected virtual Dependencies<T> Dependencies { get; } = null;
+    protected virtual Dependencies<T>? Dependencies { get; } = null;
     protected virtual StoreEnhancer<T>? Enhancer { get; set; } = null;
     protected abstract void NotifyChange();
 }
